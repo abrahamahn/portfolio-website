@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // logo name
-const logo = "dark";
-const logo2 = "light";
+const dark = "dark";
+const light = "light";
 
 const HeaderMobile = () => {
   return (
     <>
       <div className="logo">
         <Link to="/">
-          <img className="logo_dark" src={`img/logo/${logo2}.png`} alt="brand" />
+          <img className="logo_dark" src={`img/logo/${light}.png`} alt="brand" />
           <img
             className="logo_light"
-            src={`img/logo/${logo}.png`}
+            src={`img/logo/${dark}.png`}
             alt="brand"
           />
         </Link>

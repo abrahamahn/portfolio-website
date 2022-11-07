@@ -655,11 +655,11 @@ body.dark .loader_line:after {
   float: left;
   transition: all 0.5s ease;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    padding-left: 292px;
+    padding-left: 240px;
     margin-top: 0px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    padding-left: 245px;
+    padding-left: 225px;
   }
 }
 
