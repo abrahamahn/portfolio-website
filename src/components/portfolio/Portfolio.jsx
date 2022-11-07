@@ -43,7 +43,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="img/portfolio/1.jpg"
+                    src="/build/img/portfolio/1.jpg"
                     data-tip
                     data-for="product"
                     alt="portfolio"
@@ -76,7 +76,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="img/portfolio/2.jpg"
+                    src="/build/img/portfolio/2.jpg"
                     data-tip
                     data-for="dribbble"
                     alt="portfolio"
@@ -109,9 +109,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="img/portfolio/3.jpg"
-                    data-tip
-                    data-for="facebook"
+                    src="/build/img/portfolio/3.jpg"
                     alt="portfolio"
                   />
                   <ReactTooltip
@@ -136,7 +134,7 @@ const Portfolio = () => {
             <div className="list_inner">
               <div className="image">
                 <a
-                  href="https://www.youtube.com/c/Cashrollie/videos"
+                  href="/build/img/portfolio/4.jpg"
                   target="_blank"
                   rel="noreferrer"
                   className="details"
@@ -175,7 +173,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="img/portfolio/5.jpg"
+                    src="/build/img/portfolio/5.jpg"
                     data-tip
                     data-for="web"
                     alt="portfolio"
