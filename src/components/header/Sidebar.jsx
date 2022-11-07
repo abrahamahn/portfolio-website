@@ -61,12 +61,12 @@ const Sidebar = () => {
             <Link to="/">
               <img
                 className="logo_dark"
-                src={`/build/img/logo/${logo2}.png`}
+                src={`/img/logo/${logo2}.png`}
                 alt="brand"
               />
               <img
                 className="logo_light"
-                src={`/build/img/logo/${logo}.png`}
+                src={`/img/logo/${logo}.png`}
                 alt="brand"
               />
             </Link>

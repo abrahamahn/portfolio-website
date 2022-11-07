@@ -43,7 +43,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="/public/img/portfolio/1.jpg"
+                    src="/img/portfolio/1.jpg"
                     data-tip
                     data-for="product"
                     alt="portfolio"
@@ -76,7 +76,7 @@ const Portfolio = () => {
                   className="details"
                 >
                   <img
-                    src="/public/img/portfolio/2.jpg"
+                    src="/img/portfolio/2.jpg"
                     data-tip
                     data-for="dribbble"
                     alt="portfolio"

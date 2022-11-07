@@ -428,10 +428,10 @@ body.dark .loader_line:after {
   z-index: 98;
   transition: all 0.3s ease;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    width: 292px;
+    width: 240px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    width: 245px;
+    width: 225px;
   }
   @media screen and (min-width: 481px) and (max-width: 768px) {
     width: 240px;
@@ -3323,6 +3323,7 @@ a {
 // header mobile
 .header-area {
   position: fixed;
+  height: 75px;
   width: 100%;
   left: 0;
   top: 0;
