@@ -2743,10 +2743,11 @@ a {
   }
   .progress_inner .label {
     order: 2;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    padding: 0 2px;
   }
   .progress_inner .background {
     order: 2;
@@ -3155,6 +3156,8 @@ a {
 .img-shape {
   width: 250px;
   height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto 15px;
   @media screen and (max-width: 1599px) {
     width: 245px;
@@ -3173,6 +3176,8 @@ a {
     width: 100%;
     max-width: 100%;
     -webkit-mask-size: auto auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-mask-image: url(../../hero-shape.svg);
     mask-image: url(../../hero-shape.svg);
   }
