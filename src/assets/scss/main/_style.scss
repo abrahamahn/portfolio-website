@@ -718,35 +718,39 @@ body.dark .loader_line:after {
   }
 }
 .edina_tm_hero .image-shape {
-    width: 200px;
-    height: 200px;
-    background-repeat: no-repeat !important;
+  order: 1;
+  width: 220px;
+  height: 220px;    
+  background-repeat: no-repeat !important;
 }
 .edina_tm_hero .image {
-  display: inline-block;
-  width: 500px;
-  height: 500px;
+  order: 1;
+  display: block;
+  width: auto;
+  height: auto;
   border-radius: 100%;
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   opacity: 1;
   visibility: visible;
   left: 0px;
   transition: all 1s ease;
   background-repeat: no-repeat !important;
+  background-size: cover;
 }
 
 .edina_tm_hero .image .main {
   position: absolute;
-  width: 200px;
+  width: auto;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   background-repeat: no-repeat !important;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   border-radius: 100%;
+  margin-bottom: 30px;
 }
 .edina_tm_hero .image:before {
   content: "";
@@ -757,16 +761,17 @@ body.dark .loader_line:after {
   right: -10px;
   background-color: #f4f4f4;
   border-radius: 100%;
+  margin-bottom: 30px;
 }
 .edina_tm_hero .name {
   font-weight: 700;
   line-height: 1.1;
   margin: 10px 0px;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 44px;
+    font-size: 38px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 42px;
+    font-size: 38px;
   }
 .edina_tm_hero .extra {
   position: relative;
@@ -775,6 +780,7 @@ body.dark .loader_line:after {
   left: 0px;
   transition-delay: 0.8s;
   transition: all 1s ease;
+  margin-top: 0px;
 }
 }
 .edina_tm_hero .text {
@@ -782,11 +788,11 @@ body.dark .loader_line:after {
   margin: 0px auto 25px auto;
   line-height: 1.2;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0px 0px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 15px;
+    font-size: 14px;
     padding: 0px 0px;
   }
 }
@@ -2629,9 +2635,6 @@ a {
     height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .edina_tm_hero .image .main {
-    background-size: auto;
   }
   .edina_tm_hero .content {
     padding: 0px;
