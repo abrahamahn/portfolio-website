@@ -720,6 +720,7 @@ body.dark .loader_line:after {
 .edina_tm_hero .image-shape {
     width: 200px;
     height: 200px;
+    background-repeat: no-repeat !important;
 }
 .edina_tm_hero .image {
   display: inline-block;
@@ -732,6 +733,7 @@ body.dark .loader_line:after {
   visibility: visible;
   left: 0px;
   transition: all 1s ease;
+  background-repeat: no-repeat !important;
 }
 
 .edina_tm_hero .image .main {
@@ -741,7 +743,7 @@ body.dark .loader_line:after {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
   background-position: center;
   background-size: auto;
   border-radius: 100%;
