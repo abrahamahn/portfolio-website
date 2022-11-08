@@ -2623,9 +2623,12 @@ a {
     padding: 10px;
   }
   .edina_tm_hero .image {
+    margin-top: 0px;
     order: 2;
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .edina_tm_hero .image .main {
     background-size: auto;

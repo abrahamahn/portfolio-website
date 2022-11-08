@@ -19,6 +19,7 @@ const Hero = () => {
             src={`img/hero/${heroContent.shapeImage}`}
             srcSet={`img/hero/${heroContent.heroImage}.jpg`}
             alt="about author"
+            className="image"
           />
         </div>
         <div className="extra">
