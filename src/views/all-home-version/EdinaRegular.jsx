@@ -77,7 +77,7 @@ const EdinaHome = () => {
       <div className="edina_tm_services" id="service">
         <div className="container">
           <div className="edina_tm_title">
-            <h3>Projects</h3>
+            <h3>Services</h3>
           </div>
           {/* End edian_tm_title */}
           <Service />

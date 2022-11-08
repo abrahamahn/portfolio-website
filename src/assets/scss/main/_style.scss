@@ -686,17 +686,20 @@ body.dark .loader_line:after {
       @media screen and (min-width: 1025px) and (max-width: 4000px) {
         font-size: 16px;
         padding: 10px 25px;
+      &:hover {
+        transform: translateY(-5px);
+      }
       }
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         font-size: 14px;
         padding: 9px 22.5px;
       }
-      @media screen and (max-width: 768px) {
-        font-size: 14px;
-        padding: 9px 22.5px;
-      }
       &:hover {
         transform: translateY(-5px);
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        padding: 10px 25px;
       }
     }
     @media screen and (min-width: 1025px) and (max-width: 4000px) {
@@ -713,14 +716,15 @@ body.dark .loader_line:after {
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     margin-top: -20px;
   }
-  @media screen and (max-width: 768px) {
-    margin-top: 10px;
-  }
+}
+.edina_tm_hero .image-shape {
+    width: 200px;
+    height: 200px;
 }
 .edina_tm_hero .image {
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height: 500px;
   border-radius: 100%;
   position: relative;
   margin-bottom: 27px;
@@ -732,14 +736,14 @@ body.dark .loader_line:after {
 
 .edina_tm_hero .image .main {
   position: absolute;
-  width: 100px;
+  width: 200px;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   border-radius: 100%;
 }
 .edina_tm_hero .image:before {
@@ -757,15 +761,11 @@ body.dark .loader_line:after {
   line-height: 1.1;
   margin: 10px 0px;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 42px;
+    font-size: 44px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     font-size: 42px;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 44px;
-  }
-}
 .edina_tm_hero .extra {
   position: relative;
   opacity: 1;
@@ -774,22 +774,18 @@ body.dark .loader_line:after {
   transition-delay: 0.8s;
   transition: all 1s ease;
 }
-
+}
 .edina_tm_hero .text {
   max-width: 800px;
   margin: 0px auto 25px auto;
   line-height: 1.2;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 17px;
-    padding: 0px 270px;
+    font-size: 16px;
+    padding: 0px 0px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 16px;
-    padding: 0px 165px;
-  }
-  @media screen and (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
-    padding: 0px 80px;
+    padding: 0px 0px;
   }
 }
 .edina_tm_hero .social ul {
@@ -911,9 +907,6 @@ body.dark .loader_line:after {
   font-weight: 700;
   margin-top: -40px;
   margin-bottom: 10px;
-  @media screen and (max-width: 768px) { 
-  font-size: 30px;
-}
 }
 .edina_tm_about .dodo_progress {
   width: 100%;
@@ -921,9 +914,6 @@ body.dark .loader_line:after {
   padding-top: 20px;
   flex-wrap: wrap;
   margin: 13px -20px 20px;
-  @media screen and (max-width: 768px) {
-    margin: 0;
-  }
 }
 .edina_tm_about .desc {
   margin-top: -40px;
@@ -1111,7 +1101,6 @@ body.dark .loader_line:after {
     margin-top: 15px;
     a {
       border-radius: 15px;
-      font-size: 16px;
     }
   }
   .row {
@@ -2312,10 +2301,7 @@ body.modal {
 }
 .edina_tm_contact .first_row {
   width: 100%;
-  margin-bottom: 30px;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 0px;
 }
 .edina_tm_contact .second {
   width: 100%;
@@ -2628,34 +2614,57 @@ a {
 /*---------------------------------------------------*/
 @media (max-width: 768px) {
   .edina_tm_title h3 {
+    order: 1;
     font-size: 35px;
   }
   .container {
     padding: 10px;
   }
-  .edina_tm_hero .name {
-    font-size: 18px;
+  .edina_tm_hero .img-shape {
+    order: 2;
+    width: 200px;
+    height: 200px;
   }
   .edina_tm_hero .image {
-    width: 2000px;
-    height: 2000px;
+    order: 2;
+    width: 200px;
+    height: 200px;
+  }
+  .edina_tm_hero .image .main {
+    background-size: auto;
   }
   .edina_tm_hero .content {
-    padding: 30px;
+    padding: 0px;
+    margin-top: -20px;
   }
-  .edina_tm_button {
-    margin-top: -150px;
+  .edina_tm_hero .extra {
+    margin-top: 35px;
   }
+  .edina_tm_hero .name {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+  .edina_tm_hero .text {
+    margin-top: 0px;
+    font-size: 13px;
+    padding: 0px 0px;
+  }
+  .edina_tm_hero .edina_tm_button .a {
+      font-size: 14px;
+      padding: 9px 25px;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
 
 
 
   .edina_tm_about {
-    padding: 40px 15px;
     height: auto;
   }
   .edina_tm_about .about_title h3 {
-    margin-top: 0px;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 0;
   }
@@ -2670,7 +2679,9 @@ a {
     height: 80px;
   }
   .edina_tm_about .experience .info h3 {
-    font-size: 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 0;
     font-weight: 500;
     color: #ffffff;
   }
@@ -2681,7 +2692,7 @@ a {
   }
   .edina_tm_about .rightpart .image img {
     position: relative;
-    min-width: 50%;
+    min-width: 60%;
     opacity: 0;
   }
   .edina_tm_about .rightpart .image .main {
@@ -2703,12 +2714,16 @@ a {
     width: 100%;
     margin-top: -50px;
     margin-bottom: 20px;
+    padding: 0 5px;
   }
   .edina_tm_about .leftpart .info p {
+    font-size: 14px;
     max-width: 100%;
   }
   .edina_tm_about .my_skills {
+    padding: 0 5px;
     order: 2;
+    font-size: 14px;
     width: 100%;
     float: left;
   }
@@ -2724,7 +2739,7 @@ a {
   }
   .edina_tm_about .wrapper .progress_inner {
     width: 33%;
-    padding: 0 5px;
+    padding: 0 7px;
   }
   .progress_inner {
     margin-bottom: 15px;
@@ -2734,18 +2749,18 @@ a {
     font-size: 12px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .progress_inner .background {
     order: 2;
-    height: 11px;
+    height: 15px;
   }
   .progress_inner .background .bar_in {
     order: 2;
     border-radius: 6px;
   }
   .edina_tm_about .color {
-    margin-top: 160px;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 6px 20px;
     font-size: 14px;
@@ -2756,7 +2771,7 @@ a {
 
   .edina_tm_services {
     height: auto;
-    padding: 20px;
+    padding: 30px;
   }
   .edina_tm_services ul li .list_inner {
     padding: 0 0px;
@@ -2822,8 +2837,12 @@ a {
   
 
   .edina_tm_portfolio {
-  height: auto;
-  padding: 30px 20px 60px 20px;
+    margin-top: -20px;
+    height: auto;
+    padding: 30px 20px 60px 20px;
+  }
+  .edina_tm_portfolio .edina_tm_title {
+    margin-bottom: -20px;
   }
   .my_carousel .prev_button,
   .my_carousel .next_button {
@@ -2860,7 +2879,8 @@ a {
 
 
   .edina_tm_contact {
-    padding: 40px 10px;
+    height: auto;
+    padding: 30px 10px;
   }  
   .edina_tm_contact .mainpart .left {
     padding: 10px;
@@ -2913,7 +2933,7 @@ a {
   }
   .edina_tm_contact .third {
     width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: -140px;
   }
   .edina_tm_contact textarea {
     font-size: 14px;
@@ -2925,6 +2945,7 @@ a {
   }
   .edina_tm_button a,
   .edina_tm_button button {
+    order: 5;
     font-size: 15px;
   }
   .edina_tm_contact .right {
@@ -3143,8 +3164,8 @@ a {
     height: 245px;
   }
   @media screen and (max-width: 768px) {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
   }
   img {
     -webkit-mask-position: center center;
