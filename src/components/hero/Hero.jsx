@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="content">
         <div className="img-shape" data-aos="fade-up" data-aos-duration="1200">
           <img
-            src={`img/hero/${heroContent.shapeImage}`}
+            src={`img/hero/${heroContent.heroImage}`}
             srcSet={`img/hero/${heroContent.heroImage}.jpg`}
             alt="about author"
             className="image"
