@@ -793,7 +793,7 @@ body.dark .loader_line:after {
   line-height: 1.1;
   margin: 0px 0px;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: px;
+    font-size: 44px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     font-size: 42px;
@@ -812,21 +812,9 @@ body.dark .loader_line:after {
 }
 .tm_edina_hero .text {
   font-size: 18px;
-  max-width: 800px;
+  max-width: 300px;
   margin: 0px auto 25px auto;
   line-height: 1.2;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 16px;
-    padding: 0px 180px;
-  }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 16px;
-    padding: 0px 180px;
-  }
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    font-size: 15px;
-    padding: 0px 180px;
-  }
 }
 .edina_tm_hero .social ul {
   margin-top: 20px;
@@ -972,7 +960,7 @@ body.dark .loader_line:after {
   width: 100%;
   height: auto;
   clear: both;
-  float: left;
+  float: center;
 }
 .edina_tm_about .color {
   border-radius: 14px;
@@ -1656,7 +1644,7 @@ body.dark .loader_line:after {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 120px 10px 120px 10px;
+  padding: 120px 10px;
   border-bottom: solid 1px #d4d4d4;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
     font-size: 16px;
@@ -1666,19 +1654,19 @@ body.dark .loader_line:after {
     font-size: 14px;
     padding: 9px 27.5px;
   }
-  @media screen and (max-width: 768px) {
-    padding: 8px 25px;
-  }
   .my_carousel ul li .image {
     height: auto;
   }
-
+}
+.edina_tm_portfolio .edina_tm_title {
+  margin-top: 20px;
+  margin-left: 0px;
 }
 .edina_tm_portfolio .portfolio_inner {
   width: 100%;
   height: auto;
   clear: both;
-  float: left;
+  float: center;
   padding-top: 40px;
 }
 .my_carousel {
@@ -1687,6 +1675,7 @@ body.dark .loader_line:after {
   clear: both;
   float: left;
   position: relative;
+  margin-bottom: 40px;
 }
 .my_carousel ul {
   margin: 0px;
@@ -1707,8 +1696,8 @@ body.dark .loader_line:after {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  height: 320px;
-  width: 320px;
+  height: 300px;
+  width: 300px;
   margin: 0px auto;
   @media screen and (max-width: 1500px) {
     height: auto;
@@ -2252,7 +2241,7 @@ body.modal {
   }
 }
 .edina_tm_contact .container .edina_tm_title {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .edina_tm_contact .extra_info {
   width: 100%;
@@ -2694,11 +2683,12 @@ a {
   .edina_tm_hero .text {
     margin-top: 5px;
     font-size: 14px;
-    padding: 0px 60px;
+    width: 250px;
   }
   .edina_tm_hero .edina_tm_button a {
     font-size: 14px;
-    padding: 9px 25px;
+    padding: 9px 20px;
+    letter-spacing: 0.4;
     font-style: normal !important;
     &:hover {
       transform: translateY(-5px);
@@ -2711,7 +2701,7 @@ a {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .edina_tm_about .about_title h3 {
     font-size: 40px;
@@ -2771,13 +2761,13 @@ a {
     padding: 0 5px;
   }
   .edina_tm_about .leftpart .info p {
-    font-size: 15px;
+    font-size: 13px;
     max-width: 100%;
   }
   .edina_tm_about .my_skills {
     padding: 0 5px;
     order: 2;
-    font-size: 14px;
+    font-size: 13px;
     width: 100%;
     float: left;
   }
@@ -2788,6 +2778,7 @@ a {
     margin: 0px -6px 0px;
   }
   .edina_tm_about .desc {
+    font-size: 13px;
     max-width: 100%;
     margin-top: 0px;
   }
@@ -2800,7 +2791,7 @@ a {
   }
   .progress_inner .label {
     order: 2;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     color: #000000;
     margin-bottom: 8px;
@@ -2817,7 +2808,7 @@ a {
   .edina_tm_about .color {
     margin-top: 12px;
     border-radius: 10px;
-    padding: 6px 20px;
+    padding: 8px 20px;
     font-size: 14px;
     letter-spacing: 0.4;
   }
@@ -3001,13 +2992,19 @@ a {
   
 
   .edina_tm_portfolio {
-    margin-top: -20px;
     height: auto;
-    padding: 30px 20px 60px 0px;
-    border-top: solid 1px #d4d4d4;
+    padding: 30px 20px 0px 0px;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+    .container {
+      margin: 0;
+      padding: 0;
+    }
   }
   .edina_tm_portfolio .edina_tm_title {
-    margin-bottom: -20px;
+    margin-bottom: -50px;
+    margin-left: -10px;
     padding: 0 30px;
   }
   .my_carousel .prev_button,

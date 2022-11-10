@@ -14,7 +14,7 @@ const skillsContent = [
     skillPercent: "50",
   },
   {
-    name: "Digital Marketing",
+    name: "Marketing",
     skillPercent: "83",
   },
   {
