@@ -90,6 +90,9 @@ const EdinaHome = () => {
           <div className="edina_tm_title">
             <h3>Portfolio</h3>
           </div>
+          <div className="text">
+            <p>Click the photo to view projects in detail.</p>
+          </div>
           {/* End edian_tm_title */}
           <Portfolio />
         </div>
