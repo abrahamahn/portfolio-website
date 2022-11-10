@@ -884,11 +884,8 @@ body.dark .loader_line:after {
   background: #ffffff;
   border-bottom: solid 1px #d4d4d4;
   overflow: auto;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
+  @media screen and (min-width: 769px) and (max-width: 4000px) {
     padding: 10px 20px;
-  }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    padding: 20px;
   }
 }
 .edina_tm_about .about_title {
@@ -2699,11 +2696,17 @@ a {
   
   .edina_tm_about {
     height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
+    padding: 0px 0px;
+  }
+  .edina_tm_about .container {
+    margin: 0px;
+    padding: 0px 15px;
   }
   .edina_tm_about .about_title h3 {
+    margin-top: 50px;
     font-size: 40px;
     font-weight: 700;
     line-height: 0;
@@ -2924,7 +2927,8 @@ a {
 
   .edina_tm_services {
     height: auto;
-    padding: 30px;
+    padding: 15px;
+    margin-top: 20px;
     border-bottom: solid 1px #d4d4d4;
   }
   .edina_tm_services ul li .list_inner {
@@ -2993,8 +2997,7 @@ a {
 
   .edina_tm_portfolio {
     height: auto;
-    padding: 30px 20px 0px 0px;
-    padding: 20px;
+    padding: 30px 15px;
     align-items: center;
     margin: 0 auto;
     .container {
@@ -3043,7 +3046,7 @@ a {
 
   .edina_tm_contact {
     height: auto;
-    padding: 30px 20px;
+    padding: 30px 15px;
   } 
   .edina_tm_contact .edina_tm_title h3 {
     margin-left: 0px;
