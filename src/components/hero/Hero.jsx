@@ -76,7 +76,7 @@ const Hero = () => {
             data-aos-duration="800"
             data-aos-delay="500"
           >
-            <a href="punlic/resume.pdf" download className="color">
+            <a href="public/resume.pdf" download className="color">
               Download CV
             </a>
           </div>
