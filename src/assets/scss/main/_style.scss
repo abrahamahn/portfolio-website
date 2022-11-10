@@ -717,8 +717,6 @@ body.dark .loader_line:after {
   }
 
 }
-
-
 .edina_tm_hero .content {
   margin: 0 auto;
   padding: 0px;
@@ -727,6 +725,9 @@ body.dark .loader_line:after {
   align-items: center;
   align-content: center;
   @media screen and (min-width: 1025px) and (max-width: 4000px) {
+    margin-top: -20px;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
     margin-top: -20px;
   }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -785,29 +786,29 @@ body.dark .loader_line:after {
       background-color: #f4f4f4;
       border-radius: 0%;
     }
-    .name {
-      font-weight: 700;
-      line-height: 1.1;
-      margin: 0px 0px;
-      @media screen and (min-width: 1025px) and (max-width: 4000px) {
-        font-size: 42px;
-      }
-      @media screen and (min-width: 769px) and (max-width: 1024px) {
-        font-size: 42px;
-      }
-      @media screen and (max-width: 768px) {
-        font-size: 44px;
-      }
-    }
-    .extra {
-      position: relative;
-      opacity: 1;
-      visibility: visible;
-      left: 0px;
-      transition-delay: 0.8s;
-      transition: all 1s ease;
-    }
   }
+}
+.tm_edina_hero .name {
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0px 0px;
+  @media screen and (min-width: 1025px) and (max-width: 4000px) {
+    font-size: px;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 44px;
+  }
+}
+.tm_dina_hero .extra {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  left: 0px;
+  transition-delay: 0.8s;
+  transition: all 1s ease;
 }
 .tm_edina_hero .text {
   font-size: 18px;
@@ -2728,7 +2729,7 @@ a {
     margin-top: -180px;
   }
   .edina_tm_about .experience {
-    bottom: 90px;
+    bottom: 10px;
     left: 10px;
     width: 80px;
     height: 80px;
