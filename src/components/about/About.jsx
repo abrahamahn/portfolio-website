@@ -27,7 +27,7 @@ const About = () => {
           >
             <div className="info">
               <p>
-                I specialize in designing and building marvelous digital web experiences and letting people know about them. Currently, I am building music social media applications on both the web and mobile.
+                I specialize in designing and building marvelous digital web experiences and letting people know about them. Currently, I am building different web app modules related to music, multimedia, and social media.
               </p>
             </div>
             <div className="my_skills">
@@ -67,7 +67,6 @@ const About = () => {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               ></div>
-
               <div
                 className="experience"
                 data-aos="fade-up"
