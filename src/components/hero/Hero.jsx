@@ -3,7 +3,7 @@ import Social from "../Social";
 import ReactTyped from "react-typed";
 
 const heroContent = {
-  shapeImage: "profile-picture",
+  shapeImage: "profile-picture.svg",
   heroImage: "2",
   name: "Abraham J. Ahn",
   description: `Specialized in creating the best digital web experiences.`,

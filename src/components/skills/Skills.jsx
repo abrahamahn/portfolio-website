@@ -3,27 +3,27 @@ import React from "react";
 const skillsContent = [
   {
     name: "C++",
-    skillPercent: "75",
+    skillPercent: "55",
   },
   {
     name: "Javascript",
-    skillPercent: "90",
+    skillPercent: "83",
   },
   {
     name: "Python",
-    skillPercent: "95",
-  },
-  {
-    name: "Full-Stack",
     skillPercent: "85",
   },
   {
+    name: "Full-Stack",
+    skillPercent: "75",
+  },
+  {
     name: "Web Design",
-    skillPercent: "80",
+    skillPercent: "78",
   },
   {
     name: "Digital Marketing",
-    skillPercent: "90",
+    skillPercent: "87",
   },
 ];
 
