@@ -884,9 +884,7 @@ body.dark .loader_line:after {
   background: #ffffff;
   border-bottom: solid 1px #d4d4d4;
   overflow: auto;
-  @media screen and (min-width: 769px) and (max-width: 4000px) {
-    padding: 10px 20px;
-  }
+  padding: 30px;
 }
 .edina_tm_about .about_title {
   width: 100%;
@@ -1328,15 +1326,7 @@ body.dark .loader_line:after {
   align-items: center;
   background-color: #f6f6f6;
   border-bottom: solid 1px #d4d4d4;
-  padding: 120px 0px 90px 0px;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 16px;
-    padding: 10px 30px;
-  }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 14px;
-    padding: 9px 27.5px;
-  }
+  padding: 30px;
 }
 
 .edina_tm_title {
@@ -1345,6 +1335,7 @@ body.dark .loader_line:after {
   clear: both;
   float: left;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 .edina_tm_title h3 {
   font-size: 45px;
@@ -1641,30 +1632,22 @@ body.dark .loader_line:after {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 120px 10px;
+  padding: 30px;
   border-bottom: solid 1px #d4d4d4;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 16px;
-    padding: 10px 30px;
-  }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 14px;
-    padding: 9px 27.5px;
-  }
   .my_carousel ul li .image {
     height: auto;
   }
 }
 .edina_tm_portfolio .edina_tm_title {
-  margin-top: 20px;
-  margin-left: 0px;
+  margin-top: 0px;
+  margin-left: 10px;
 }
 .edina_tm_portfolio .portfolio_inner {
   width: 100%;
   height: auto;
   clear: both;
   float: center;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 .my_carousel {
   width: 100%;
@@ -2194,18 +2177,7 @@ body.modal {
   clear: both;
   float: left;
   background-color: #f6f6f6;
-  padding: 0px 10px;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
-    font-size: 16px;
-    padding: 40px 20px;
-  }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    font-size: 14px;
-    padding: 40px 20px;
-  }
-  @media screen and (max-width: 768px) {
-    padding: 40px 10px;
-  }
+  padding: 60px 30px;
   .my_carousel ul li .image {
     height: auto;
   }
@@ -2238,7 +2210,7 @@ body.modal {
   }
 }
 .edina_tm_contact .container .edina_tm_title {
-  margin-left: 0px;
+  margin-left: 10px;
 }
 .edina_tm_contact .extra_info {
   width: 100%;
@@ -2267,9 +2239,6 @@ body.modal {
   padding: 20px 20px 20px 20px;
   border: solid 1px #d4d4d4;
   border-radius: 10px;
-  @media screen and (max-width: 1199px) {
-    padding: 20px;
-  }
 }
 .edina_tm_contact .extra_info .in {
   margin: 0px;
