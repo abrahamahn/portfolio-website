@@ -2,6 +2,7 @@
 
 /*	This file is made for CURRENT TEMPLATE
 
+00) LINKTREE 
 01)	EDINA BASE
 02) EDINA MOBILE MENU
 03) EDINA SIDEBAR
@@ -13,6 +14,20 @@
 09) EDINA NEWS
 10) EDINA CONTACT
 11) EDINA MEDIA QUERIES (FOR SMALL DEVIVES)
+
+/*---------------------------------------------------*/
+/*	00) LINKTREE
+/*---------------------------------------------------*/
+.linktree {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  background-color: #000000;
+};
+
 
 /*--------------------------------f-------------------*/
 /*	01) EDINA BASE
