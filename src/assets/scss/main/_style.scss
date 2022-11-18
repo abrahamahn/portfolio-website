@@ -1065,7 +1065,7 @@ body.dark .loader_line:after {
 .edina_tm_about .experience {
   position: absolute;
   margin: 0 auto;
-  bottom: 80px;
+  bottom: 30px;
   left: -30px;
   z-index: 1;
   width: 200px;
@@ -1641,6 +1641,13 @@ body.dark .loader_line:after {
 .edina_tm_portfolio .edina_tm_title {
   margin-top: 0px;
   margin-left: 10px;
+  margin-bottom: -10px;
+}
+.edina_tm_portfolio .text {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-style: italic;
 }
 .edina_tm_portfolio .portfolio_inner {
   width: 100%;
@@ -2981,6 +2988,7 @@ a {
   .edina_tm_portfolio .text {
     margin-left: 10px;
     margin-bottom: 40px;
+    font-style: italic;
   }
   .my_carousel .prev_button,
   .my_carousel .next_button {

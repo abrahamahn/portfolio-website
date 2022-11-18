@@ -37,7 +37,7 @@ const Service = () => {
               <div className="hover">
                 <img className="svg custom" src="img/svg/1.svg" alt="" />
                 <div className="service_title">
-                  <h3>Data-driven Marketing</h3>
+                  <h3>Digital Marketing</h3>
                 </div>
 {/*                <div className="learn_more">
                   Learn More<span></span>
@@ -73,7 +73,7 @@ const Service = () => {
               <div className="hover">
                 <img className="svg custom" src="img/svg/3.svg" alt="" />
                 <div className="service_title">
-                  <h3>Front-end Development</h3>
+                  <h3>Front-end Dev</h3>
                 </div>
 {/*                <div className="learn_more">
                   Learn More<span></span>
@@ -91,7 +91,7 @@ const Service = () => {
               <div className="hover">
                 <img className="svg custom" src="img/svg/4.svg" alt="" />
                 <div className="service_title">
-                  <h3>Back-end Development</h3>
+                  <h3>Back-end Dev</h3>
                 </div>
 {/*                <div className="learn_more">
                   Learn More<span></span>
