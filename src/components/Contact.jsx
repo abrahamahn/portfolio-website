@@ -17,7 +17,7 @@ const Contact = ({
         <div className="first_row">
           <input
             {...register("name", { required: true })}
-            name="name"
+            name={sender.name}
             type="text"
             placeholder="Name *"
             className="text"
@@ -44,7 +44,7 @@ const Contact = ({
               },
               { required: true }
             )}
-            name="email"
+            name={sender.email}
             type="email"
             placeholder="Email *"
             className="text"
@@ -61,10 +61,11 @@ const Contact = ({
         <div className="third">
           <textarea
             {...register("message", { required: true })}
-            name="message"
+            name={sender.message}
             type="text"
             placeholder="Message *"
             className="text"
+            key={sender.key}
             defaultValue={sender.key}
             value={sender.value}
             onChange={onChange}

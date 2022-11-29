@@ -19,11 +19,11 @@ const App = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
+    emailjs.send(
       'service_2dr1qmv', 
-      'template_lk0paok', 
+      'template_w5iqp0o', 
       e.target, 
-      'YOUR_PUBLIC_KEY'
+      'NfAHr5e8dWDpEmpQJ'
       )
       .then((result) => {
         console.log('Thanks for reaching out. I will return to you shortly.', result.message, result.status, result.text);
@@ -50,6 +50,7 @@ const App = () => {
       <ScrollToTop />
       <Home 
         sender={sender}
+        setSender={setSender}
         onChange={onChange}
         onSubmit={onSubmit}
       />
