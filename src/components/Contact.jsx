@@ -3,9 +3,7 @@ import React from "react";
 const Contact = ({
   register,
   errors,
-  contactData,
-  setContactData,
-  handleChange,
+  setValue,
   onSubmit,
   handleSubmit,
 }) => {
@@ -32,8 +30,10 @@ const Contact = ({
             className="text"
             register={register}
             errors={errors}
-            defaultValue={contactData.name}
-            onChange={handleChange}
+            defaultValue="name"
+            onChange={(e) => {
+              setValue("name", e.target.value);
+            }}
           />
           {errors.name && errors.name.type === "required" && (
             <span className="invalid-feedback">Name is required</span>
@@ -61,8 +61,10 @@ const Contact = ({
             className="text"
             register={register}
             errors={errors}
-            defaultValue={contactData.email}
-            onChange={handleChange}
+            defaultValue="email"
+            onChange={(e) => {
+              setValue("email", e.target.value);
+            }}
           />
           {errors.email && (
             <span className="invalid-feedback">{errors.email.message}</span>
@@ -80,8 +82,10 @@ const Contact = ({
             className="text"
             register={register}
             errors={errors}
-            defaultValue={contactData.message}
-            onChange={handleChange}
+            defaultValue="message"
+            onChange={(e) => {
+              setValue("message", e.target.value);
+            }}
           ></textarea>
           {errors.message && (
             <span className="invalid-feedback">Message is required</span>
@@ -94,7 +98,7 @@ const Contact = ({
             type="submit" 
             className="color"
             value="Submit"
-            onClick={this.handleSubmit(onSubmit)}
+            onClick={handleSubmit(onSubmit)}
           />
         </div>
         {/* End tokyo_tm_button */}

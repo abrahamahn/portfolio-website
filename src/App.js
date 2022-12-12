@@ -8,27 +8,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function App() {
-  // CONTACT FORM LOGIC
-  const initialList = {
-    name: "name",
-    email: "email",
-    message: "message" };
-  const [ contactData, setContactData ] = useState({...initialList});
-  const { register, errors, handleSubmit } = useForm({...contactData});
-  function handleChange(e) {    
-    setContactData({
-    ...contactData,
-    [e.target.key]: [e.target.value]});
-  }
-  const onSubmit = (e) => {
-    console.log(e.target.value);
-    e.preventDefault();
+  const { register, setValue, handleSubmit, formState: { errors }, } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    }});
+
+  const onSubmit = (data) => {
+    console.log(data);
+    data.preventDefault();
 
     emailjs
       .sendForm(
         'service_2dr1qmv', 
         'template_w5iqp0o', 
-        e.target,
+        data.target,
         'NfAHr5e8dWDpEmpQJ'
       )
       .then((result) => {
@@ -36,14 +31,14 @@ export default function App() {
         ${result.name}!`, result.message);
       })
       .catch((error) => {
-        alert('It looks like we have hit an error. Could you please try again?');
+        alert('It looks like we have hit an error. Could you please try again?', error.message);
       })
-      setContactData({ ...initialList});
+      setValue({ ...useForm.defaultValues});
   };
-  
+
   useEffect(() => {
     AOS.init()}, []);
-    
+
   return (
     <div className='App'>
       <AnimatedCursor
@@ -58,9 +53,7 @@ export default function App() {
       <Home 
         register={register}
         errors={errors}
-        contactData={contactData}
-        setContactData={setContactData}
-        handleChange={handleChange}
+        setValue={setValue}
         onSubmit={onSubmit}
         handleSubmit={handleSubmit}
       />
