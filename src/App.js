@@ -1,42 +1,49 @@
 import React, { useState, useEffect } from "react";
 import Home from "./views/Home";
-import emailjs from '@emailjs/browser'
 import ScrollToTop from "./components/ScrollToTop";
-import AOS from "aos";
 import AnimatedCursor from "react-animated-cursor";
+import { useForm } from "react-hook-form";
+import * as emailjs from "@emailjs/browser"
+import AOS from "aos";
 import "aos/dist/aos.css";
 
-const App = () => {
-  const [sender, setSender] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const onChange = (e) => {
-    setSender({ ...sender, [e.target.key]: e.target.value });
-  };
-
+export default function App() {
+  // CONTACT FORM LOGIC
+  const initialList = {
+    name: "name",
+    email: "email",
+    message: "message" };
+  const [ contactData, setContactData ] = useState({...initialList});
+  const { register, errors, handleSubmit } = useForm({...contactData});
+  function handleChange(e) {    
+    setContactData({
+    ...contactData,
+    [e.target.key]: [e.target.value]});
+  }
   const onSubmit = (e) => {
+    console.log(e.target.value);
     e.preventDefault();
-    emailjs.send(
-      'service_2dr1qmv', 
-      'template_w5iqp0o', 
-      e.target, 
-      'NfAHr5e8dWDpEmpQJ'
+
+    emailjs
+      .sendForm(
+        'service_2dr1qmv', 
+        'template_w5iqp0o', 
+        e.target,
+        'NfAHr5e8dWDpEmpQJ'
       )
       .then((result) => {
-        console.log('Thanks for reaching out. I will return to you shortly.', result.message, result.status, result.text);
+        alert(`Thank you for you message, 
+        ${result.name}!`, result.message);
       })
       .catch((error) => {
-        console.log('It looks like we have hit an error. Could you please try again?', error.message, error.status, error.text);
-      });
+        alert('It looks like we have hit an error. Could you please try again?');
+      })
+      setContactData({ ...initialList});
   };
-
+  
   useEffect(() => {
-    AOS.init();
-  }, []);
-
+    AOS.init()}, []);
+    
   return (
     <div className='App'>
       <AnimatedCursor
@@ -49,13 +56,14 @@ const App = () => {
       />
       <ScrollToTop />
       <Home 
-        sender={sender}
-        setSender={setSender}
-        onChange={onChange}
+        register={register}
+        errors={errors}
+        contactData={contactData}
+        setContactData={setContactData}
+        handleChange={handleChange}
         onSubmit={onSubmit}
+        handleSubmit={handleSubmit}
       />
     </div>
   );
 };
-
-export default App;

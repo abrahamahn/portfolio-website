@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -48,7 +48,7 @@ const Portfolio = () => {
                     data-for="product"
                     alt="portfolio"
                   />
-                  <ReactTooltip
+                  <Tooltip
                     id="product"
                     place="bottom"
                     type="light"
@@ -59,7 +59,7 @@ const Portfolio = () => {
                       <h5>DAW Console</h5>
                       <span>UI Design</span>
                     </div>
-                  </ReactTooltip>
+                  </Tooltip>
                 </a>
               </div>
             </div>
@@ -81,7 +81,7 @@ const Portfolio = () => {
                     data-for="dribbble"
                     alt="portfolio"
                   />
-                  <ReactTooltip
+                  <Tooltip
                     id="dribbble"
                     place="bottom"
                     type="light"
@@ -92,7 +92,7 @@ const Portfolio = () => {
                       <h5>Music Player</h5>
                       <span>Design</span>
                     </div>
-                  </ReactTooltip>
+                  </Tooltip>
                 </a>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Portfolio = () => {
                     data-for="facebook"
                     alt="portfolio"
                   />
-                  <ReactTooltip
+                  <Tooltip
                     id="facebook"
                     place="bottom"
                     type="light"
@@ -125,7 +125,7 @@ const Portfolio = () => {
                       <h5>Cahsorllie</h5>
                       <span>Product</span>
                     </div>
-                  </ReactTooltip>
+                  </Tooltip>
                 </a>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Portfolio = () => {
                     data-for="youtube"
                     alt="portfolio"
                   />
-                  <ReactTooltip
+                  <Tooltip
                     id="youtube"
                     place="bottom"
                     type="light"
@@ -158,7 +158,7 @@ const Portfolio = () => {
                       <h5>Cashrollie</h5>
                       <span>Content Marketing</span>
                     </div>
-                  </ReactTooltip>
+                  </Tooltip>
                 </a>
               </div>
             </div>
@@ -180,7 +180,7 @@ const Portfolio = () => {
                     data-for="web"
                     alt="portfolio"
                   />
-                  <ReactTooltip
+                  <Tooltip
                     id="web"
                     place="bottom"
                     type="light"
@@ -191,7 +191,7 @@ const Portfolio = () => {
                       <h5>Nick Hadim</h5>
                       <span>Web Development</span>
                     </div>
-                  </ReactTooltip>
+                  </Tooltip>
                 </a>
               </div>
             </div>

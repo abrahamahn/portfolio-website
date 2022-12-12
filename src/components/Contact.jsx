@@ -1,29 +1,39 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
 const Contact = ({
-  sender,
-  onChange,
+  register,
+  errors,
+  contactData,
+  setContactData,
+  handleChange,
   onSubmit,
+  handleSubmit,
 }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
   return (
     <div>
-      <form className="contact_form" onSubmit={handleSubmit({onSubmit})}>
+      <form className="contact_form">
         <div className="first_row">
           <input
-            {...register("name", { required: true })}
-            name={sender.name}
+            {...register(
+              "name", 
+              { 
+                required: "Please enter your name",
+                maxLength: {
+                  value: 30,
+                  message: "Please enter a name with fewer thank 30 characters.",
+                }, 
+              },
+              { required: true }  
+            )}
+            name="name"
+            key="name"
             type="text"
             placeholder="Name *"
             className="text"
-            defaultValue={sender.key}
-            value={sender.value}
-            onChange={onChange}
+            register={register}
+            errors={errors}
+            defaultValue={contactData.name}
+            onChange={handleChange}
           />
           {errors.name && errors.name.type === "required" && (
             <span className="invalid-feedback">Name is required</span>
@@ -44,13 +54,15 @@ const Contact = ({
               },
               { required: true }
             )}
-            name={sender.email}
+            name="email"
+            key="email"
             type="email"
             placeholder="Email *"
             className="text"
-            defaultValue={sender.key}
-            value={sender.value}
-            onChange={onChange}
+            register={register}
+            errors={errors}
+            defaultValue={contactData.email}
+            onChange={handleChange}
           />
           {errors.email && (
             <span className="invalid-feedback">{errors.email.message}</span>
@@ -61,14 +73,15 @@ const Contact = ({
         <div className="third">
           <textarea
             {...register("message", { required: true })}
-            name={sender.message}
+            name="message"
+            key="message"
             type="text"
             placeholder="Message *"
             className="text"
-            key={sender.key}
-            defaultValue={sender.key}
-            value={sender.value}
-            onChange={onChange}
+            register={register}
+            errors={errors}
+            defaultValue={contactData.message}
+            onChange={handleChange}
           ></textarea>
           {errors.message && (
             <span className="invalid-feedback">Message is required</span>
@@ -77,13 +90,12 @@ const Contact = ({
         {/* End .third */}
 
         <div className="edina_tm_button">
-          <button 
+          <button
             type="submit" 
             className="color"
-            onClick={onSubmit}
-          >
-            Submit
-          </button>
+            value="Submit"
+            onClick={this.handleSubmit(onSubmit)}
+          />
         </div>
         {/* End tokyo_tm_button */}
       </form>
