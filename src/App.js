@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Home from "./views/Home";
 import ScrollToTop from "./components/ScrollToTop";
 import AnimatedCursor from "react-animated-cursor";
@@ -8,7 +8,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function App() {
-  const { register, setValue, handleSubmit, formState: { errors }, } = useForm({
+  const form = useRef();
+  const { register, setValue, formState: { errors }, } = useForm({
     defaultValues: {
       name: '',
       email: '',
@@ -19,20 +20,17 @@ export default function App() {
     console.log(e);
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    emailjs.sendForm(
         'service_2dr1qmv', 
         'template_w5iqp0o', 
-        e.target,
+        form.current,
         'NfAHr5e8dWDpEmpQJ'
       )
       .then((result) => {
-        alert(`Thank you for you message, 
-        ${result.name}!`, result.message);
-      })
-      .catch((error) => {
+        alert(`Thank you for you message! I will return to you shortly via email address you provided. Best, Abe`, result.message);
+      }, (error) => {
         alert('It looks like we have hit an error. Could you please try again?', error.message);
-      })
+      });
       setValue({ ...useForm.defaultValues});
   };
 
@@ -51,11 +49,11 @@ export default function App() {
       />
       <ScrollToTop />
       <Home 
+        form={form}
         register={register}
-        errors={errors}
         setValue={setValue}
+        errors={errors}
         sendEmail={sendEmail}
-        handleSubmit={handleSubmit}
       />
     </div>
   );

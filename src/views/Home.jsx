@@ -10,11 +10,11 @@ import Map from "../components/Map";
 import HeaderMobile from "../components/header/HeaderMobile";
 
 const Home = ({
+  form,
   register,
-  errors,
   setValue,
+  errors,
   sendEmail,
-  handleSubmit,
 }) => {
   return (
     <div className={`home-light edina_tm_mainpart`}>
@@ -117,11 +117,11 @@ const Home = ({
               {/* End title */}
               <div className="fields">
                 <Contact
+                  form={form}
                   register={register}
-                  errors={errors}
                   setValue={setValue}
+                  errors={errors}
                   sendEmail={sendEmail}
-                  handleSubmit={handleSubmit}
                 />
               </div>
               {/* End Contact Form */}
