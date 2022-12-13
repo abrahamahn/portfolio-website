@@ -4,12 +4,12 @@ const Contact = ({
   register,
   errors,
   setValue,
-  onSubmit,
+  sendEmail,
   handleSubmit,
 }) => {
   return (
     <div>
-      <form className="contact_form">
+      <form className="contact_form" onSubmit={handleSubmit({sendEmail})}>
         <div className="first_row">
           <input
             {...register(
@@ -28,7 +28,6 @@ const Contact = ({
             type="text"
             placeholder="Name *"
             className="text"
-            register={register}
             errors={errors}
             defaultValue="name"
             onChange={(e) => {
@@ -59,7 +58,6 @@ const Contact = ({
             type="email"
             placeholder="Email *"
             className="text"
-            register={register}
             errors={errors}
             defaultValue="email"
             onChange={(e) => {
@@ -80,7 +78,6 @@ const Contact = ({
             type="text"
             placeholder="Message *"
             className="text"
-            register={register}
             errors={errors}
             defaultValue="message"
             onChange={(e) => {
@@ -98,8 +95,9 @@ const Contact = ({
             type="submit" 
             className="color"
             value="Submit"
-            onClick={handleSubmit(onSubmit)}
-          />
+          >
+            Submit
+          </button>
         </div>
         {/* End tokyo_tm_button */}
       </form>

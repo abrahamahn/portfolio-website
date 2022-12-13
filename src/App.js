@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Home from "./views/Home";
 import ScrollToTop from "./components/ScrollToTop";
 import AnimatedCursor from "react-animated-cursor";
@@ -15,15 +15,15 @@ export default function App() {
       message: '',
     }});
 
-  const onSubmit = (data) => {
-    console.log(data);
-    data.preventDefault();
+  const sendEmail = (e) => {
+    console.log(e);
+    e.preventDefault();
 
     emailjs
       .sendForm(
         'service_2dr1qmv', 
         'template_w5iqp0o', 
-        data.target,
+        e.target,
         'NfAHr5e8dWDpEmpQJ'
       )
       .then((result) => {
@@ -54,7 +54,7 @@ export default function App() {
         register={register}
         errors={errors}
         setValue={setValue}
-        onSubmit={onSubmit}
+        sendEmail={sendEmail}
         handleSubmit={handleSubmit}
       />
     </div>

@@ -13,8 +13,7 @@ const Home = ({
   register,
   errors,
   setValue,
-  handleChange,
-  onSubmit,
+  sendEmail,
   handleSubmit,
 }) => {
   return (
@@ -121,8 +120,7 @@ const Home = ({
                   register={register}
                   errors={errors}
                   setValue={setValue}
-                  handleChange={handleChange}
-                  onSubmit={onSubmit}
+                  sendEmail={sendEmail}
                   handleSubmit={handleSubmit}
                 />
               </div>
