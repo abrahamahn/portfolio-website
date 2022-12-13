@@ -82,7 +82,7 @@ const Portfolio = () => {
                     alt="portfolio"
                   />
                   <Tooltip
-                    id="dribbble"
+                    id="1"
                     place="bottom"
                     type="light"
                     effect="float"

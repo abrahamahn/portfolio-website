@@ -1698,7 +1698,6 @@ body.dark .loader_line:after {
 .my_carousel ul li .image {
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
   height: 300px;
   width: 300px;
   margin: 0px auto;
@@ -1723,6 +1722,8 @@ body.dark .loader_line:after {
 }
 .my_carousel ul li .image img {
   position: relative;
+  background-size: cover;
+  border-radius: 15%;
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
@@ -1734,8 +1735,6 @@ body.dark .loader_line:after {
   right: 0px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  border-radius: 10px;
   transition: all 0.4s ease-in-out;
 }
 .my_carousel ul li .list_inner:hover .image .main {
@@ -2996,7 +2995,7 @@ a {
     }
   }
   .edina_tm_portfolio .edina_tm_title {
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     margin-left: -10px;
     padding: 0 30px;
   }
@@ -3005,6 +3004,7 @@ a {
     margin-bottom: 40px;
     font-style: italic;
   }
+   
   .my_carousel .prev_button,
   .my_carousel .next_button {
     width: 50px;

@@ -76,7 +76,7 @@ const Hero = () => {
             data-aos-duration="800"
             data-aos-delay="500"
           >
-            <a href="https://www.dropbox.com/s/kyxiihbjq30odxl/resume.pdf?dl=0" download className="color">
+            <a href="https://www.dropbox.com/s/0iv6cpb7kjt1bzp/resume.pdf?dl=0" download className="color">
               Download CV
             </a>
           </div>
