@@ -6,11 +6,12 @@ const Contact = ({
   setValue,
   errors,
   sendEmail,
+  contactSectionRef
 }) => {
   return (
     <div>
       <form className="contact_form" ref={form} onSubmit={sendEmail}>
-        <div className="first_row">
+        <div className="first_row" ref={contactSectionRef}>
           <input
             {...register(
               'name', 

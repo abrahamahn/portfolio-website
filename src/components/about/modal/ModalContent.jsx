@@ -4,18 +4,15 @@ import PersonalInfo from "../PersonalInfo";
 import Experience from "../Experience";
 import Education from "../Education";
 
-const ModalContent = () => {
+const ModalContent = ({
+  handleDownloadResume
+}) => {
   return (
     <>
       <div className="row">
         <div className="col-6">
           <h3>Personal Info</h3>
           <PersonalInfo />
-          <div className="edina_tm_button">
-            <a href="https://www.dropbox.com/s/kyxiihbjq30odxl/resume.pdf?dl=0" download className="color">
-              Download CV
-            </a>
-          </div>
         </div>
         {/* End  PersonalInfo */}
 

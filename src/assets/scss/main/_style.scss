@@ -693,7 +693,7 @@ body.dark .loader_line:after {
     margin-top: 20px;
     color: #88888b;
     text-decoration: none;
-    a {
+    button {
       text-decoration: none;
       border-radius: 10px;
       font-size: 15px;
@@ -2416,7 +2416,7 @@ body.modal {
     padding: 7px 22.5px;
   }
 }
-.edina_tm_button a:hover,
+.edina_tm_button button:hover,
 .edina_tm_contact .edina_tm_button button:hover {
   color: #fff;
   background-color: #000000;

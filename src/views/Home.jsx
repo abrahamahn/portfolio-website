@@ -15,6 +15,8 @@ const Home = ({
   setValue,
   errors,
   sendEmail,
+  contactSectionRef,
+  handleResumeClick,
 }) => {
   return (
     <div className={`home-light edina_tm_mainpart`}>
@@ -27,10 +29,14 @@ const Home = ({
       <Sidebar />
       {/* End Header */}
 
-      <Hero />
+      <Hero 
+        handleResumeClick={handleResumeClick}
+      />
       {/* End Hero */}
 
-      <About />
+      <About 
+        handleResumeClick={handleResumeClick}
+      />
       {/* End Hero */}
 
       <div className="edina_tm_services" id="service">
@@ -109,9 +115,9 @@ const Home = ({
             >
               <div className="title">
                 <p>
-                  I'm always open to discussing 
+                  Don't hesitate to contact for
                   <br />
-                  <span> new projects or partnerships.</span>
+                  <span> resume request or new projects.</span>
                 </p>
               </div>
               {/* End title */}
@@ -122,6 +128,7 @@ const Home = ({
                   setValue={setValue}
                   errors={errors}
                   sendEmail={sendEmail}
+                  contactSectionRef={contactSectionRef}
                 />
               </div>
               {/* End Contact Form */}

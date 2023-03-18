@@ -2,23 +2,37 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "Oct 2017 - Jun 2020",
+    year: "Jan 2018 - Present",
     img: "/img/icon/cashrollie.jpg",
-    position: " Founder/Owner",
+    position: " Founder",
     compnayName: "Cashrollie",
     details: `  Music production and publishing company for artists and content creators.`,
   },
   {
-    year: "Mar 2017 - Oct 2017",
+    year: "Mar 2017 - Dec 2017",
     img: "/img/icon/nick.jpg",
-    position: " Operation Manager",
+    position: "Web Developer and Marketing Manager",
     compnayName: "Nick Hadim Group of Companies",
     details: `Commercial real estate property management company based in Los Angeles.`,
   },
   {
-    year: "Jul 2013 - Dec 2013",
+    year: "Jan 2016 - Oct 2016",
+    img: "/img/icon/sunrun.jpg",
+    position: "Sales Associate",
+    compnayName: "Sunrun",
+    details: `Generated $100,000+/yr revenue with door-to-door sales, 4,000+/mo cold prospects, and averaged 60+/mo closes.`,
+  },
+  {
+    year: "May 2014 - Present",
+    img: "/img/icon/portal.jpg",
+    position: "Founder & Freelancer",
+    compnayName: "Portal Music Group",
+    details: `Client: Transparent Agency, Far East Movement, Dumbfoundead, Native Instruments, Splice, Google, KIA, GE, Ensure, JW Marriott, Markus Persson, Ultra Music Festival`,
+  },
+  {
+    year: "Aug 2013 - Dec 2013",
     img: "/img/icon/axs.jpg",
-    position: "Product & Marketing Intern",
+    position: "Product and Marketing Intern",
     compnayName: "AXS.com",
     details: `Online ticketing service platform owned by Anschutz Entertainment Group (AEG).`,
   },

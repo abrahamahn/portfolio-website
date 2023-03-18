@@ -37,6 +37,11 @@ export default function App() {
   useEffect(() => {
     AOS.init()}, []);
 
+  const contactSectionRef = useRef(null);
+  let handleResumeClick = () => {
+    contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className='App'>
       <AnimatedCursor
@@ -54,6 +59,8 @@ export default function App() {
         setValue={setValue}
         errors={errors}
         sendEmail={sendEmail}
+        handleResumeClick={handleResumeClick}
+        contactSectionRef={contactSectionRef}
       />
     </div>
   );

@@ -9,7 +9,7 @@ const heroContent = {
   description: `Specialized in creating the best digital web experiences.`,
 };
 
-const Hero = () => {
+const Hero = ({handleResumeClick}) => {
   return (
     //    HERO
     <div className="edina_tm_hero" id="home">
@@ -76,9 +76,9 @@ const Hero = () => {
             data-aos-duration="800"
             data-aos-delay="500"
           >
-            <a href="https://www.dropbox.com/s/0iv6cpb7kjt1bzp/resume.pdf?dl=0" download className="color">
-              Download CV
-            </a>
+            <button onClick={handleResumeClick}  className="color">
+              Download Resume
+            </button>
           </div>
         </div>
       </div>

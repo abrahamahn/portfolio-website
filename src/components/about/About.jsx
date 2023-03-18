@@ -5,12 +5,13 @@ import ModalContent from "./modal/ModalContent";
 
 Modal.setAppElement("#root");
 
-const About = () => {
+const About = ({
+  handleResumeClick
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleModalOne() {
     setIsOpen(!isOpen);
   }
-
   return (
     //    ABOUT
     <div className="edina_tm_about" id="about">
@@ -101,7 +102,8 @@ const About = () => {
 
           <div className="box_inner">
             <div className="description_wrap scrollable">
-              <ModalContent />
+              <ModalContent
+              />
             </div>
           </div>
           {/* End box inner */}
