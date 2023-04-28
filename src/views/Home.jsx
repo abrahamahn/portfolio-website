@@ -23,6 +23,14 @@ const Home = ({
           <HeaderMobile />
         </div>
       </header>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK7EC996CC"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MK7EC996CC');
+        </script>
       <Sidebar />
       <Hero 
         handleResumeClick={handleResumeClick}
