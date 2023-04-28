@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Home from "./views/Home";
-import ScrollToTop from "./components/ScrollToTop";
 import AnimatedCursor from "react-animated-cursor";
 import { useForm } from "react-hook-form";
 import * as emailjs from "@emailjs/browser"
@@ -52,7 +51,6 @@ export default function App() {
         innerScale={0.8}
         outerScale={1.4}
       />
-      <ScrollToTop />
       <Home 
         form={form}
         register={register}

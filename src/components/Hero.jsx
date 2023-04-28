@@ -1,5 +1,5 @@
 import React from "react";
-import Social from "../Social";
+import Social from "./Social";
 import ReactTyped from "react-typed";
 
 const heroContent = {
@@ -76,8 +76,8 @@ const Hero = ({handleResumeClick}) => {
             data-aos-duration="800"
             data-aos-delay="500"
           >
-            <button onClick={handleResumeClick}  className="color">
-              Download Resume
+            <button onClick={handleResumeClick} >
+              Request Resume
             </button>
           </div>
         </div>

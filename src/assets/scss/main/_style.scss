@@ -691,7 +691,7 @@ body.dark .loader_line:after {
   padding: 0px;
   .edina_tm_button {
     margin-top: 20px;
-    color: #88888b;
+    color: transparent;
     text-decoration: none;
     button {
       text-decoration: none;
@@ -2674,11 +2674,10 @@ a {
     font-size: 14px;
     width: 250px;
   }
-  .edina_tm_hero .edina_tm_button a {
-    font-size: 14px;
+  .edina_tm_hero .edina_tm_button button {
+    font-size: 15px;
     padding: 9px 20px;
     letter-spacing: 0.4;
-    font-style: normal !important;
     &:hover {
       transform: translateY(-5px);
     }

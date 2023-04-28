@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Skills from "../skills/Skills";
+import Skills from "./about/Skills";
+import ModalContent from "./about/modal/ModalContent";
 import Modal from "react-modal";
-import ModalContent from "./modal/ModalContent";
 
 Modal.setAppElement("#root");
 
