@@ -17,18 +17,15 @@ const Home = ({
   handleResumeClick,
 }) => {
   return (
-    <div className={`home-light edina_tm_mainpart`}>
-      <header className="header-area">
-        <div className="header-inner">
+    <div className="main_container">
+      <header className="mobile_header">
+        <div className="mobile_header_inner">
           <HeaderMobile />
         </div>
       </header>
-      <Hero 
-        handleResumeClick={handleResumeClick}
-      />
-      <About 
-        handleResumeClick={handleResumeClick}
-      />
+      <Sidebar />
+      <Hero handleResumeClick={handleResumeClick} />
+      <About handleResumeClick={handleResumeClick} />
       <Service />
       <Portfolio />
       <Contact
@@ -37,7 +34,7 @@ const Home = ({
         setValue={setValue}
         errors={errors}
         sendEmail={sendEmail}
-        contactSectionRef={contactSectionRef} 
+        contactSectionRef={contactSectionRef}
       />
     </div>
   );

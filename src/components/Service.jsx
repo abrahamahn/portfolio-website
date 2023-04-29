@@ -14,18 +14,10 @@ const Service = () => {
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
 
-  function toggleModalOne() {
-    setIsOpen(!isOpen);
-  }
-  function toggleModalTwo() {
-    setIsOpen2(!isOpen2);
-  }
-  function toggleModalThree() {
-    setIsOpen3(!isOpen3);
-  }
-  function toggleModalFour() {
-    setIsOpen4(!isOpen4);
-  }
+  function toggleModalOne() { setIsOpen(!isOpen); }
+  function toggleModalTwo() { setIsOpen2(!isOpen2); }
+  function toggleModalThree() { setIsOpen3(!isOpen3); }
+  function toggleModalFour() { setIsOpen4(!isOpen4);}
 
   return (
     <div className="edina_tm_services" id="service">
@@ -44,7 +36,7 @@ const Service = () => {
                     <div className="service_title">
                       <h3>Digital Marketing</h3>
                     </div>
-                    {/*                <div className="learn_more">
+                    {/* <div className="learn_more">
                   Learn More<span></span>
                 </div>
 */}{" "}
@@ -67,7 +59,7 @@ const Service = () => {
                     <div className="service_title">
                       <h3>User Interface Design</h3>
                     </div>
-                    {/*                <div className="learn_more">
+                    {/* <div className="learn_more">
                   Learn More<span></span>
                </div>
 */}{" "}
@@ -90,7 +82,7 @@ const Service = () => {
                     <div className="service_title">
                       <h3>Front-end Dev</h3>
                     </div>
-                    {/*                <div className="learn_more">
+                    {/* <div className="learn_more">
                   Learn More<span></span>
                 </div>
 */}{" "}

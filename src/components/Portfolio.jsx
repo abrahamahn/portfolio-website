@@ -1,5 +1,4 @@
 import React from "react";
-import { Tooltip } from "react-tooltip";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Portfolio = () => {
   var settings = {
     dots: true,
-    arrow: true,
+    arrows: true,
     infinite: false,
     speed: 800,
     slidesToShow: 5,
@@ -19,7 +18,7 @@ const Portfolio = () => {
         breakpoint: 575,
         settings: {
           slidesToShow: 1,
-          arrow: false,
+          arrows: false,
           autoplay: false,
           draggable: true,
           speed: 300,
@@ -52,22 +51,8 @@ const Portfolio = () => {
                     >
                       <img
                         src="img/portfolio/1.jpg"
-                        data-tip
-                        data-for="dribbble"
                         alt="portfolio"
                       />
-                      <Tooltip
-                        id="1"
-                        place="bottom"
-                        type="light"
-                        effect="float"
-                        className="tooltip-wrapper"
-                      >
-                        <div>
-                          <h5>Music Player</h5>
-                          <span>Design</span>
-                        </div>
-                      </Tooltip>
                     </a>
                   </div>
                 </div>
@@ -85,22 +70,8 @@ const Portfolio = () => {
                     >
                       <img
                         src="img/portfolio/2.jpg"
-                        data-tip
-                        data-for="facebook"
                         alt="portfolio"
                       />
-                      <Tooltip
-                        id="facebook"
-                        place="bottom"
-                        type="light"
-                        effect="float"
-                        className="tooltip-wrapper"
-                      >
-                        <div>
-                          <h5>Cahsorllie</h5>
-                          <span>Product</span>
-                        </div>
-                      </Tooltip>
                     </a>
                   </div>
                 </div>
@@ -118,22 +89,8 @@ const Portfolio = () => {
                     >
                       <img
                         src="img/portfolio/3.jpg"
-                        data-tip
-                        data-for="youtube"
                         alt="portfolio"
                       />
-                      <Tooltip
-                        id="youtube"
-                        place="bottom"
-                        type="light"
-                        effect="float"
-                        className="tooltip-wrapper"
-                      >
-                        <div>
-                          <h5>Cashrollie</h5>
-                          <span>Content Marketing</span>
-                        </div>
-                      </Tooltip>
                     </a>
                   </div>
                 </div>
@@ -151,22 +108,8 @@ const Portfolio = () => {
                     >
                       <img
                         src="img/portfolio/4.jpg"
-                        data-tip
-                        data-for="web"
                         alt="portfolio"
                       />
-                      <Tooltip
-                        id="web"
-                        place="bottom"
-                        type="light"
-                        effect="float"
-                        className="tooltip-wrapper"
-                      >
-                        <div>
-                          <h5>Nick Hadim</h5>
-                          <span>Web Development</span>
-                        </div>
-                      </Tooltip>
                     </a>
                   </div>
                 </div>

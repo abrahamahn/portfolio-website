@@ -1,48 +1,47 @@
-import React, { useEffect, useRef } from "react";
-import Home from "./views/Home";
+import React, { useRef } from "react";
+import Home from "./pages/Home";
 import AnimatedCursor from "react-animated-cursor";
 import { useForm } from "react-hook-form";
-import * as emailjs from "@emailjs/browser"
-import AOS from "aos";
-import "aos/dist/aos.css";
+import * as emailjs from "@emailjs/browser";
 
 export default function App() {
   const form = useRef();
-  const { register, setValue, formState: { errors }, } = useForm({
+  const contactSectionRef = useRef(null);
+  const { register, setValue, formState: { errors },
+  } = useForm({
     defaultValues: {
       name: '',
       email: '',
       message: '',
-    }});
+    },
+  });
 
   const sendEmail = (e) => {
-    console.log(e);
     e.preventDefault();
 
     emailjs.sendForm(
-        'service_2dr1qmv', 
-        'template_w5iqp0o', 
-        form.current,
-        'NfAHr5e8dWDpEmpQJ'
-      )
-      .then((result) => {
-        alert(`Thank you for you message! I will return to you shortly via email address you provided. Best, Abe`, result.message);
-      }, (error) => {
+      'service_2dr1qmv',
+      'template_w5iqp0o',
+      form.current,
+      'NfAHr5e8dWDpEmpQJ'
+    ).then(
+      (result) => {
+        alert(`Thank you for your message! I will return to you shortly via the email address you provided. Best, Abe`, result.message);
+      },
+      (error) => {
         alert('It looks like we have hit an error. Could you please try again?', error.message);
-      });
-      setValue({ ...useForm.defaultValues});
+      }
+    );
+
+    setValue({ ...useForm.defaultValues });
   };
 
-  useEffect(() => {
-    AOS.init()}, []);
-
-  const contactSectionRef = useRef(null);
-  let handleResumeClick = () => {
+  const handleResumeClick = () => {
     contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className='App'>
+    <div>
       <AnimatedCursor
         innerSize={16}
         outerSize={28}

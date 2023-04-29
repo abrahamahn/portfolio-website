@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  FiLinkedin,
-  FiGithub,
-} from "react-icons/fi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
 
 const SocialShare = [
   {
@@ -14,6 +11,7 @@ const SocialShare = [
     link: "https://www.linkedin.com/in/abrahamahn/",
   },
 ];
+
 const Social = () => {
   return (
     <ul>
