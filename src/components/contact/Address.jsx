@@ -6,7 +6,7 @@ const Address = () => {
       <li data-aos="fade-right" data-aos-duration="1200">
         <div className="list_inner">
           <div className="icon">
-            <img src="img/address/phone.png" alt="icon" />
+            <img src="img/contact/phone.png" alt="icon" />
           </div>
           <div className="content">
             <h3>Phone</h3>
@@ -21,7 +21,7 @@ const Address = () => {
       <li data-aos="fade-right" data-aos-duration="1200" data-aos-delay="100">
         <div className="list_inner">
           <div className="icon">
-            <img src="img/address/email.png" alt="icon" />
+            <img src="img/contact/email.png" alt="icon" />
           </div>
           <div className="content">
             <h3>Email</h3>

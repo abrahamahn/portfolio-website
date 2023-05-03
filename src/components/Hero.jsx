@@ -1,5 +1,5 @@
 import React from "react";
-import Social from "./Social";
+import Social from "./hero/Social";
 import ReactTyped from "react-typed";
 
 const heroContent = {
@@ -61,7 +61,6 @@ const Hero = ({handleResumeClick}) => {
           >
             {heroContent.description}
           </p>
-
           <div
             className="social"
             data-aos="fade-up"

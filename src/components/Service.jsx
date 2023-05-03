@@ -14,7 +14,7 @@ const Service = () => {
               <Tilt>
                 <div className="list_inner">
                   <div className="hover">
-                    <img className="svg custom" src="img/svg/1.svg" alt="" />
+                    <img className="svg custom" src="img/service/service-1.svg" alt="" />
                     <div className="service_title">
                       <h3>Digital Marketing</h3>
                     </div>
@@ -30,7 +30,7 @@ const Service = () => {
               <Tilt>
                 <div className="list_inner">
                   <div className="hover">
-                    <img className="svg custom" src="img/svg/2.svg" alt="" />
+                    <img className="svg custom" src="img/service/service-2.svg" alt="" />
                     <div className="service_title">
                       <h3>User Interface Design</h3>
                     </div>
@@ -46,7 +46,7 @@ const Service = () => {
               <Tilt>
                 <div className="list_inner">
                   <div className="hover">
-                    <img className="svg custom" src="img/svg/3.svg" alt="" />
+                    <img className="svg custom" src="img/service/service-3.svg" alt="" />
                     <div className="service_title">
                       <h3>Front-end Dev</h3>
                     </div>
@@ -62,7 +62,7 @@ const Service = () => {
               <Tilt>
                 <div className="list_inner">
                   <div className="hover">
-                    <img className="svg custom" src="img/svg/4.svg" alt="" />
+                    <img className="svg custom" src="img/service/service-4.svg" alt="" />
                     <div className="service_title">
                       <h3>Back-end Dev</h3>
                     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Address from "../components/Address";
+import Address from "../components/contact/Address";
 
 const Contact = ({
   form,

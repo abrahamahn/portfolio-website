@@ -9,7 +9,7 @@ const logo2 = "light";
 // sidebar content
 const sidebarContent = [
   { icon: "home", itemName: "Home", itemRoute: "#home", activeClass: "active" },
-  { icon: "human", itemName: "About", itemRoute: "#about", activeClass: "" },
+  { icon: "about", itemName: "About", itemRoute: "#about", activeClass: "" },
   {
     icon: "service",
     itemName: "Service",
