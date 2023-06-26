@@ -12,12 +12,6 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
-html {
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-}
-
 body {
   font-family: "Poppins";
   font-size: 15px;
@@ -1107,6 +1101,8 @@ h6 {
             justify-content: center;
 
             .info_top_inner {
+              width: 100%;
+              overflow-x:auto;
               @media screen and (max-width: 1080px) {
                 height: auto;
               }
@@ -1123,8 +1119,9 @@ h6 {
 
               .date,
               .domain,
-              .category {
-                font-size: 10px;
+              .category,
+              .stack {
+                font-size: 0.55rem;
                 margin: 2px 0;
                 color: rgb(81, 81, 81);
                 @media screen and (max-width: 1080px) {
@@ -1142,55 +1139,96 @@ h6 {
               .category {
                 display: flex;
                 font-weight: 500;
-
-                .category {
-                  margin-right: 5px;
-                }
-
+                margin-right: 5px;
                 &.Web {
                   background-color: #726bff;
                   padding: 2px;
                   color: white;
                 }
-
                 &.Frontend {
                   background-color: #069bd6;
                   padding: 2px;
                   color: white;
                 }
-
                 &.Backend {
                   background-color: #620faf;
                   padding: 2px;
                   color: white;
                 }
-
                 &.Artificial {
                   background-color: #000000;
                   padding: 2px;
                   color: white;
                 }
-
                 &.Marketing {
                   background-color: #118ab2;
                   padding: 2px;
                   color: white;
                 }
-
                 &.Music {
                   background-color: #ef476f;
                   padding: 2px;
                   color: white;
                 }
+              }
 
+              .stack {
+                display: inline-block;
+                font-weight: 500;
+                margin-right: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &.React {
+                  background-color: #ce6bff;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Typescript {
+                  background-color: #1b06d6;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Next {
+                  background-color: #000000;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Javascript {
+                  background-color: #37b211;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.HTML {
+                  background-color: #ef476f;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.CSS {
+                  background-color: #efdb47;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.SCSS {
+                  background-color: #b621c1;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
               }
             }
           }
 
           .description {
             font-size: 10px;
-            margin-top: 10px;
-            overflow: hidden;
+            margin-top: 0px;
+            overflow-y: scroll;
             @media screen and (max-width: 1080px) {
               margin-top: 0px;
               font-size: 0.55rem;
@@ -1263,11 +1301,13 @@ h6 {
 
 .blog_container {
   width: 100%;
+  max-width: 1100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   @media screen and (max-width: 1080px) {
     width: 100%;
     max-width: 380px;
