@@ -14,6 +14,16 @@ interface BlogItem {
 
 const blogs: BlogItem[] = [
   {
+    link: "https://medium.com/@abrahamahn/react-js-props-documentation-304f0f457d17",
+    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*20g2eZHnPAN6I005KIEA0g.jpeg",
+    alt: "React.js Props Documentation",
+    title: "React.js Props Documentation",
+    postedDate: "2023-06-26",
+    description:
+      "Props, short for properties, are a fundamental concept in React.js that allows you to pass data from a parent component to a child component. They enable you to customize and configure child components, making them reusable and flexible. This comprehensive documentation will cover everything you need to know about React.js props, including their usage, types, advanced topics, and best practices.",
+    categories: ["Web Dev", "Frontend"],
+  },
+  {
     link: "https://medium.com/@abrahamahn/fifty-fifty-the-attrakt-shattering-glass-ceilings-and-their-success-story-of-defying-industry-93c60f81b876",
     image: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*ZMzMtEeOgQm89wAIuU9u2g.jpeg",
     alt: "FIFTY FIFTY & The ATTRAKT: Shattering Glass Ceilings and Their Success Story of Defying Industry Norms",
