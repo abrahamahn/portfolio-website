@@ -1263,7 +1263,6 @@ h6 {
 
 .blog_container {
   width: 100%;
-  max-width: 1100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -1286,7 +1285,7 @@ h6 {
       height: auto;
       clear: both;
       align-items: flex-start;
-      margin-left: 40px;
+      margin-left: 30px;
       @media screen and (max-width: 1080px) {
         font-size: 1.5rem;
         text-align: left;
@@ -1699,9 +1698,9 @@ h6 {
                 color: white;
                 font-weight: 500;
                 font-size: 1rem;
-                padding: 5px 15px;
+                padding: 8px 20px;
                 display: inline-block;
-                border-radius: 5px;
+                border-radius: 10px;
                 transition: all 0.3s ease;
                 background-color: black;
                 @media screen and (max-width: 1080px) {
