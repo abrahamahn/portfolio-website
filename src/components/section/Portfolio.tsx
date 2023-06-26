@@ -16,10 +16,10 @@ interface PortfolioItem {
 const portfolios: PortfolioItem[] = [
   {
     link: "https://abrahamahn.com/",
-    image: "assets/portfolio/nickhadim.jpg",
+    image: "assets/portfolio/portfolio-website.jpg",
     alt: "Portfolio Website",
-    title: "Front End Design",
-    postedDate: "2016-06-15",
+    title: "Full-Stack Development",
+    postedDate: "2023-06-26",
     description:
       "Personal portfolio website for myself, showcasing portfolios, Medium blog posts, social media links, and contact forms with my brief information.",
     categories: ["Web Dev", "Frontend", "UX"],
