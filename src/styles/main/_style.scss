@@ -276,10 +276,10 @@ h6 {
   display: flex;
   align-items: center;
   padding: 0px;
-  @media screen and (min-width: 1025px) and (max-width: 4000px) {
+  @media screen and (min-width: 1080px) and (max-width: 4000px) {
     padding: 12px;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1080px) {
     padding: 10px;
   }
 }
