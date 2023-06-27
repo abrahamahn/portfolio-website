@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from 'react-swipeable';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+
+
 import BlogData from '../../data/Blog';
 
 const Blog: React.FC = () => {
