@@ -8,12 +8,10 @@ interface PersonalInfoItem {
 const personalInfoContent: PersonalInfoItem[] = [
   { meta: "first name", metaInfo: "Abraham " },
   { meta: "last name", metaInfo: "Ahn" },
-  { meta: "Age", metaInfo: "30" },
+  { meta: "Age", metaInfo: "31" },
   { meta: "Nationality", metaInfo: "United States" },
   { meta: "Remote", metaInfo: "Available" },
   { meta: "In-Office", metaInfo: "Available" },
-  { meta: "Address", metaInfo: "San Francisco" },
-  { meta: "phone", metaInfo: "+1 (650)254-6342" },
   { meta: "Email", metaInfo: "satmorningrain@gmail.com" },
   { meta: "langages", metaInfo: "English, Korean, Spanish" },
 ];
