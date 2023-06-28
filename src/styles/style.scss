@@ -1,3 +1,11 @@
 @import "main/typography";
-@import "main/modal";
-@import "main/style";
+
+@import "main/base";
+
+@import "components/modal";
+@import "components/about";
+@import "components/blog";
+@import "components/contact";
+@import "components/hero";
+@import "components/menu";
+@import "components/portfolio";

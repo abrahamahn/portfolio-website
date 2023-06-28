@@ -1,0 +1,166 @@
+.contact_container {
+  width: 100%;
+  height: 100vh;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    @media screen and (max-width: 1080px) {
+      max-width: 100%;
+      padding: 0px 10px;
+      margin-top: 70px;
+    }
+    .title {
+      margin-bottom: 0px;
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        line-height: 1;
+        margin-left: 0px;
+        @media screen and (max-width: 1080px) {
+          font-size: 1.5rem;
+          margin-top: -170px;
+          margin-left: 2px;
+        }
+      }
+    }
+    .form_container {
+      width: 100%;
+      max-height: 800px;
+      clear: both;
+      display: flex;
+      @media screen and (max-width: 1080px) {
+        max-height: 500px;
+      }
+      .form {
+        width: 100%;
+        background-color: #fff;
+        padding: 30px 30px 30px 30px;
+        border-radius: 8px;
+        border: solid 1px #d4d4d4;
+        @media screen and (max-width: 1080px) {
+          width: 100%;
+          padding: 30px 20px;
+          margin-top: -10px;
+        }
+        .caption {
+          width: 100%;
+          float: left;
+          margin-left: 0px;
+          p {
+            font-size: 1rem;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            @media screen and (max-width: 1080px) {
+              font-size: 0.85rem;
+              padding: 0 2px;
+            }
+          }
+          span {
+            font-weight: 500;
+            color: #000000;
+          }
+        }
+        .fields {
+          width: 100%;
+          height: auto;
+          clear: both;
+          float: left;
+          padding: 0px;
+          margin: 0 auto;
+          margin-top: -30px;
+          .contact_form {
+            width: 100%;
+            .name, .email, .message {
+              width: 100%;
+              margin-bottom: 0px;
+              input {
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-bottom: 1px solid #d4d4d4;
+                background-color: transparent;
+                font-size: 0.85rem;
+                color: #000000;
+                letter-spacing: 0.5;
+                font-weight: 400;
+                font-family: "Poppins";
+                padding-left: 7px !important;
+                @media screen and (max-width: 1080px) {
+                  font-size: 0.75rem;
+                }
+              }
+              input:focus {
+                outline: none;
+                border-bottom-color: #0f172a;
+                background-color: transparent;
+              }
+              textarea {
+                margin-top: 20px;
+                width: 100%;
+                height: 220px;
+                border: solid 1px #d4d4d4;
+                border-radius: 5px;
+                background-color: #f8f8f8;
+                font-size: 0.85rem;
+                color: #7e7e7e;
+                font-weight: 400;
+                letter-spacing: 0.5;
+                font-family: "Poppins";
+                resize: none;
+                padding-left: 7px !important;
+                @media screen and (max-width: 1080px) {
+                  margin-top: 20px;
+                  font-size: 0.75rem;
+                  height: 140px;
+                }
+              }
+              textarea:focus {
+                outline: none;
+                border-bottom-color: #d4d4d4;
+                background-color: transparent;
+              }
+            }
+            .button {
+              width: 100%;
+              float: left;
+              clear: both;
+              button {
+                margin-top: 20px;
+                color: white;
+                font-weight: 500;
+                font-size: 1rem;
+                padding: 8px 20px;
+                display: inline-block;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                background-color: black;
+                @media screen and (max-width: 1080px) {
+                  font-size: 0.85rem;
+                  padding: 5px 15px;
+                }
+              }
+              button:hover {
+                color: black;
+                background-color: white;
+                border-color: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,336 @@
+.portfolio_container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    max-width: 380px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  .title_container {
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    margin-left: 15px;
+    .title {
+      padding: 10px;
+      height: auto;
+      clear: both;
+      align-items: flex-start;
+      margin-left: 30px;
+      @media screen and (max-width: 1080px) {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: 10px;
+      }
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+        text-align: right;
+        @media screen and (max-width: 1080px) {
+          font-size: 1rem;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0px;
+    }
+
+    .carousel_container {
+      width: 100%;
+      display: grid;
+      position: relative;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      overflow: -moz-hidden-unscrollable;
+      overflow-x: hidden;
+      @media screen and (max-width: 1080px) {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &.transition-enabled {
+        transition: transform 0.3s ease-in-out;
+      }
+      .carousel {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 5px;
+        max-width: 320px;
+        height: 220px;
+        background-color: white;
+        border: 1px solid #d5d5d5;
+        transition: background-color 0.3s ease-in-out;
+        @media screen and (max-width: 1080px) {
+          width: 100%;
+          height: 9rem;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .image_container {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          z-index: 2;
+          border-right: 1px solid #d5d5d5;
+
+          a {
+            fill: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+            .image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 5px 0px 0px 5px;
+            }
+          }
+        }
+
+        .info_container {
+          width: 50%;
+          height: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 10px;
+          background-color: #00000007;
+
+          .info_top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            .info_top_inner {
+              width: 100%;
+              overflow-x:auto;
+              @media screen and (max-width: 1080px) {
+                height: auto;
+              }
+              .title {
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+                @media screen and (max-width: 1080px) {
+                  font-size: 0.8rem;
+                  height: 1rem;
+                  overflow: hidden;
+                }
+              }
+
+              .date,
+              .domain,
+              .category,
+              .stack {
+                font-size: 0.55rem;
+                margin: 2px 0;
+                color: rgb(81, 81, 81);
+                @media screen and (max-width: 1080px) {
+                  font-size: 0.55rem;
+                  overflow: hidden;
+                }
+              }
+
+              .domain a {
+                text-decoration: none;
+                color: rgb(81, 81, 81);
+                cursor: none;
+              }
+
+              .category {
+                display: flex;
+                font-weight: 500;
+                margin-right: 5px;
+                &.Web {
+                  background-color: #726bff;
+                  padding: 2px;
+                  color: white;
+                }
+                &.Frontend {
+                  background-color: #069bd6;
+                  padding: 2px;
+                  color: white;
+                }
+                &.Backend {
+                  background-color: #620faf;
+                  padding: 2px;
+                  color: white;
+                }
+                &.Artificial {
+                  background-color: #000000;
+                  padding: 2px;
+                  color: white;
+                }
+                &.Marketing {
+                  background-color: #118ab2;
+                  padding: 2px;
+                  color: white;
+                }
+                &.Music {
+                  background-color: #ef476f;
+                  padding: 2px;
+                  color: white;
+                }
+              }
+
+              .stack {
+                display: inline-block;
+                font-weight: 500;
+                margin-right: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &.React {
+                  background-color: #ce6bff;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Typescript {
+                  background-color: #1b06d6;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Next {
+                  background-color: #000000;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.Javascript {
+                  background-color: #37b211;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.HTML {
+                  background-color: #ef476f;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.CSS {
+                  background-color: #efdb47;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+                &.SCSS {
+                  background-color: #b621c1;
+                  padding: 2px;
+                  color: white;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+
+          .description {
+            font-size: 10px;
+            margin-top: 0px;
+            overflow-y: scroll;
+            @media screen and (max-width: 1080px) {
+              margin-top: 0px;
+              font-size: 0.55rem;
+              overflow: scroll;
+              height: auto;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .page-change-icon {
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      padding: 0px;
+      margin: 0 10px;
+      background-color: #fff;
+      cursor: none;
+      z-index: 3;
+      transition: background-color 0.3s ease-in-out;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      @media screen and (max-width: 1080px) {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        margin: 0;
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    padding: 20px;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: #ccc;
+      margin: 0 5px;
+      cursor: none;
+      @media screen and (max-width: 1080px) {
+        widtH: 8px;
+        height: 8px;
+        margin: 0 4px;
+        border-radius: 100%;
+      }
+    }
+    .dot.active {
+      background-color: #000;
+    }
+    .dot:hover {
+      background-color: #aaa;
+    }
+    .dot:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #000;
+    }
+    .dot:active {
+      transform: scale(1.1);
+    }
+  }
+}

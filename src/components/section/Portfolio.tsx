@@ -15,9 +15,19 @@ interface PortfolioItem {
 }
 
 const Portfolio: React.FC = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth <= 1080;
+
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const pageSize: number = window.innerWidth < 768 ? 3 : 6;
+  const pageSize: number = window.innerWidth < 1080 ? 3 : 6;
   const totalPages: number = Math.ceil(PortfolioData.length / pageSize);
   const startIndex: number = (currentPage - 1) * pageSize;
   const endIndex: number = startIndex + pageSize;
@@ -145,6 +155,7 @@ const Portfolio: React.FC = () => {
           onClick={() => handlePageChange(1)}
         />
       </div>
+      {!isMobile && (
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <div
@@ -154,6 +165,7 @@ const Portfolio: React.FC = () => {
           ></div>
         ))}
       </div>
+      )}
     </div>
   );
 };

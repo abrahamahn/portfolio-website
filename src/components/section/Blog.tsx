@@ -6,9 +6,19 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import BlogData from '../../data/Blog';
 
 const Blog: React.FC = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth <= 1080;
+
   const [currentPage, setCurrentPage] = useState(1);
 
-  const pageSize = window.innerWidth < 768 ? 3 : 6;
+  const pageSize = window.innerWidth < 1080 ? 3 : 6;
   const totalPages = Math.ceil(BlogData.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
@@ -129,6 +139,7 @@ const Blog: React.FC = () => {
             onClick={() => handlePageChange(1)}
           />
       </div>
+      {!isMobile && (
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <div
@@ -138,6 +149,7 @@ const Blog: React.FC = () => {
           ></div>
         ))}
       </div>
+      )}
     </div>
   );
 };
