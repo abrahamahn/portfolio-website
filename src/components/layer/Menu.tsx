@@ -6,10 +6,9 @@ import {
   PortfolioIcon,
   ContactIcon,
 } from "../icons/menu";
-
 interface MenuProps {
   activeSectionIndex: number | null;
-  setActiveSectionIndex: React.Dispatch<React.SetStateAction<number | null>>;
+  setActiveSectionIndex: (index: number | null) => void;
 }
 
 interface MenuItem {
@@ -23,7 +22,7 @@ interface SocialMenuItem {
   link: string;
 }
 
-const Menu: React.FC<MenuProps> = ({ 
+const Menu: React.FC<MenuProps> = ({
   activeSectionIndex,
   setActiveSectionIndex,
 }) => {
@@ -33,10 +32,11 @@ const Menu: React.FC<MenuProps> = ({
     setActiveSectionIndex(index);
     const sectionRefs = document.querySelectorAll("section");
     if (sectionRefs.length > index) {
-      const sectionRef = sectionRefs[index] ;
+      const sectionRef = sectionRefs[index];
       sectionRef.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -44,63 +44,74 @@ const Menu: React.FC<MenuProps> = ({
   }, []);
 
   const isMobile = windowWidth <= 1080;
-  
+
   const MenuItem: MenuItem[] = [
     {
-      icon: !isMobile
-        ? <HomeIcon width={24} height={24} color="black" />
-        : <HomeIcon width={22} height={22} color="white" />,
+      icon: !isMobile ? (
+        <HomeIcon width={24} height={24} color="black" />
+      ) : (
+        <HomeIcon width={22} height={22} color="white" />
+      ),
       itemName: "Home",
       activeClass: activeSectionIndex === 0 ? "active" : "",
     },
     {
-      icon: !isMobile
-        ? <AboutIcon width={24} height={24} color="black" />
-        : <AboutIcon width={22} height={22} color="white" />,
+      icon: !isMobile ? (
+        <AboutIcon width={24} height={24} color="black" />
+      ) : (
+        <AboutIcon width={22} height={22} color="white" />
+      ),
       itemName: "About",
       activeClass: activeSectionIndex === 1 ? "active" : "",
     },
     {
-      icon: !isMobile
-        ? <PortfolioIcon width={24} height={24} color="black" />
-        : <PortfolioIcon width={22} height={22} color="white" />,
+      icon: !isMobile ? (
+        <PortfolioIcon width={24} height={24} color="black" />
+      ) : (
+        <PortfolioIcon width={22} height={22} color="white" />
+      ),
       itemName: "Portfolio",
       activeClass: activeSectionIndex === 2 ? "active" : "",
     },
     {
-      icon: !isMobile
-        ? <BlogIcon width={24} height={24} color="black" />
-        : <BlogIcon width={22} height={22} color="white" />,
+      icon: !isMobile ? (
+        <BlogIcon width={24} height={24} color="black" />
+      ) : (
+        <BlogIcon width={22} height={22} color="white" />
+      ),
       itemName: "Blog",
       activeClass: activeSectionIndex === 3 ? "active" : "",
     },
     {
-      icon: !isMobile
-        ? <ContactIcon width={22} height={22} color="black" />
-        : <ContactIcon width={22} height={22} color="white" />,
+      icon: !isMobile ? (
+        <ContactIcon width={22} height={22} color="black" />
+      ) : (
+        <ContactIcon width={22} height={22} color="white" />
+      ),
       itemName: "Contact",
       activeClass: activeSectionIndex === 4 ? "active" : "",
     },
   ];
 
   const SocialMenuItem: SocialMenuItem[] = [
-  {
-    name: "Github.",
-    link: "https://www.github.com/abrahamahn",
-  },
-  {
-    name: "Linkedin.",
-    link: "https://www.linkedin.com/in/abrahamahn/",
-  },
-  {
-    name: "Twitter.",
-    link: "https://twitter.com/satmorningrain",
-  },
-  {
-    name: "Medium.",
-    link: "https://medium.com/@abrahamahn",
-  }
-];
+    {
+      name: "Github.",
+      link: "https://www.github.com/abrahamahn",
+    },
+    {
+      name: "Linkedin.",
+      link: "https://www.linkedin.com/in/abrahamahn/",
+    },
+    {
+      name: "Twitter.",
+      link: "https://twitter.com/satmorningrain",
+    },
+    {
+      name: "Medium.",
+      link: "https://medium.com/@abrahamahn",
+    },
+  ];
+
   return (
     <div>
       {!isMobile && (
@@ -116,7 +127,9 @@ const Menu: React.FC<MenuProps> = ({
                   <li key={i} className="item">
                     <div className="item_inner">
                       <a
-                        className={i === activeSectionIndex ? val.activeClass : ""}
+                        className={
+                          i === activeSectionIndex ? val.activeClass : ""
+                        }
                         onClick={() => handleMenuItemClick(i)}
                       >
                         {val.itemName}
@@ -133,21 +146,13 @@ const Menu: React.FC<MenuProps> = ({
         <div>
           <div className="sidebar_container">
             <div className="sidebar">
-              {/*<div className="logo">
-                <h3 className="name">Abraham Ahn</h3>
-                <p className="job_title">Software Engineer & Digital Marketer</p>
-                <p className="job_title">Developing... site may have issues.</p>
-              </div>*/}
               <div className="menu">
                 <ul className="items">
                   {SocialMenuItem.map((val, i) => (
                     <li key={i} className="item">
                       <div className="item_inner">
-                        <a
-                          href={val.link}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
+                        <a href={val.link} target="_blank" rel="noreferrer">
+                          {/* Render social menu items */}
                         </a>
                       </div>
                     </li>
@@ -163,16 +168,14 @@ const Menu: React.FC<MenuProps> = ({
                   <li key={i} className="mobile_item">
                     <div className="mobile_item_inner">
                       <a
-                        className={i === activeSectionIndex ? val.activeClass : ""}
+                        className={
+                          i === activeSectionIndex ? val.activeClass : ""
+                        }
                         onClick={() => handleMenuItemClick(i)}
                         onDoubleClick={(e) => e.preventDefault()}
                       >
-                        <div className="icons">
-                          {val.icon}
-                        </div>
-                        <div className="item_name">
-                          {val.itemName}
-                        </div>
+                        <div className="icons">{val.icon}</div>
+                        <div className="item_name">{val.itemName}</div>
                       </a>
                     </div>
                   </li>
@@ -181,7 +184,6 @@ const Menu: React.FC<MenuProps> = ({
             </div>
           </div>
         </div>
-
       )}
     </div>
   );
