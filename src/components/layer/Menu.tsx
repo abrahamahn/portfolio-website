@@ -133,11 +133,11 @@ const Menu: React.FC<MenuProps> = ({
         <div>
           <div className="sidebar_container">
             <div className="sidebar">
-              <div className="logo">
+              {/*<div className="logo">
                 <h3 className="name">Abraham Ahn</h3>
                 <p className="job_title">Software Engineer & Digital Marketer</p>
                 <p className="job_title">Developing... site may have issues.</p>
-              </div>
+              </div>*/}
               <div className="menu">
                 <ul className="items">
                   {SocialMenuItem.map((val, i) => (
