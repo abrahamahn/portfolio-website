@@ -139,7 +139,6 @@ const Blog: React.FC = () => {
             onClick={() => handlePageChange(1)}
           />
       </div>
-      {!isMobile && (
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <div
@@ -149,7 +148,6 @@ const Blog: React.FC = () => {
           ></div>
         ))}
       </div>
-      )}
     </div>
   );
 };
