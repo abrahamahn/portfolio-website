@@ -7,6 +7,9 @@
   align-items: center;
   overflow: auto;
   border-bottom: 1px solid #d4d4d4;
+  @media screen and (max-width: 1080px) {
+    height: calc(100vh - 50px);
+  }
   .about {
     max-width: 800px;
     width: 100%;
