@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Transition } from 'react-transition-group';
 import AnimatedCursor from 'react-animated-cursor';
@@ -37,8 +37,25 @@ const Home: React.FC = () => {
     dispatch(setActiveSection(index));
   };
 
+  // Store the initial window height in state
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    // Update the window height on resize
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className="main_container" style={{ height: '100vh', overflow: 'hidden' }}>
+    <div className="main_container" style={{ height: `${windowHeight}px`, overflow: 'hidden' }}>
       <div className="sub_container">
         <AnimatedCursor
           innerSize={16}
