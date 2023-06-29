@@ -57,6 +57,7 @@ main {
   margin: 0 auto;
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 50px);
+    position: fixed;
     padding: 10px;
     z-index: 999;
   }
@@ -72,7 +73,6 @@ main {
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 70px);
     width: 100%;
-    padding: 0px;
   }
 }
 
