@@ -9,10 +9,7 @@
   align-items: center;
   @media screen and (max-width: 1080px) {
     width: 100%;
-    max-width: 380px;
-    height: calc(100vh - 50px);
-    margin: 0 auto;
-    margin-top: -80px;
+    height: calc(100vh - 70px);
   }
   .title_container {
     width: 100%;
@@ -30,7 +27,7 @@
       @media screen and (max-width: 1080px) {
         font-size: 1.5rem;
         text-align: left;
-        margin-left: 10px;
+        margin-left: 15px;
       }
       h3 {
         font-size: 2.5rem;
