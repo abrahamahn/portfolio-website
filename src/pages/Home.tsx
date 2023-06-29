@@ -49,10 +49,6 @@ const Home: React.FC = () => {
           outerScale={1.4}
         />
         <main>
-          <Menu
-            activeSectionIndex={activeSectionIndex}
-            setActiveSectionIndex={setActiveSectionIndex}
-          />
           {sections.map((Section, index) => (
             <Transition in={activeSectionIndex === index} timeout={250} key={index}>
               {(state) => (
@@ -64,6 +60,10 @@ const Home: React.FC = () => {
           ))}
         </main>
       </div>
+      <Menu
+        activeSectionIndex={activeSectionIndex}
+        setActiveSectionIndex={setActiveSectionIndex}
+      />
     </div>
   );
 };
