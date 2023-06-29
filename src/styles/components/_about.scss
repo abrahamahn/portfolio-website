@@ -8,6 +8,7 @@
   overflow: auto;
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 70px);
+    width: 390px;
   }
   .about {
     max-width: 800px;
@@ -116,9 +117,9 @@
             padding: 8px 15px;
             margin-left: 0px;
             @media screen and (max-width: 767px) {
-              width: 100px;
+              width: 5rem;
               font-size: 0.75rem;
-              padding: 5px 15px;
+              padding: 0.5rem 1rem;;
               margin-top: -10px;
             }
           &:hover {
