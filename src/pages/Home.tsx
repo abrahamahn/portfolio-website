@@ -4,9 +4,6 @@ import { Transition } from 'react-transition-group';
 import AnimatedCursor from 'react-animated-cursor';
 
 import Menu from '../components/navigation/Menu';
-import ScrollToTopOnMount from '../components/navigation/ScrollToTopOnMount';
-import HideBottomMenuBarOnScroll from '../components/navigation/HideBottomMenuBarOnScroll';
-
 import Hero from '../components/section/Hero';
 import About from '../components/section/About';
 import Blog from '../components/section/Blog';
@@ -42,8 +39,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="main_container" style={{ height: '100vh', overflow: 'hidden' }}>
-      <ScrollToTopOnMount />
-      <HideBottomMenuBarOnScroll />
       <div className="sub_container">
         <AnimatedCursor
           innerSize={16}

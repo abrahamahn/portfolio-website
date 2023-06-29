@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from 'react-swipeable';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import ScrollToTopOnMount from '../navigation/ScrollToTopOnMount';
+import HideBottomMenuBarOnScroll from '../navigation/HideBottomMenuBarOnScroll';
+
 import PortfolioData from '../../data/Portfolio';
 
 interface PortfolioItem {
@@ -144,6 +147,8 @@ const Portfolio: React.FC = () => {
       className="portfolio_container"
       id="portfolio"
     >
+      <ScrollToTopOnMount />
+      <HideBottomMenuBarOnScroll />
       <div className="title_container">
         <h2 className="title">Portfolio</h2>
       </div>
