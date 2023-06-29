@@ -7,7 +7,7 @@
   justify-content: center;
   margin: 0 auto;
   @media screen and (max-width: 1080px) {
-    width: 500px;
+    width: 100%;
     height: calc(100vh - 70px);
   }
   .contact {
@@ -18,7 +18,7 @@
     justify-content: center;
     margin: 0 auto;
     @media screen and (max-width: 1080px) {
-      padding: 0 20px;
+      padding: 0 15px;
     }
     .title {
       margin-bottom: 0px;
