@@ -27,6 +27,14 @@ const Menu: React.FC<MenuProps> = ({
   setActiveSectionIndex,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth <= 1080;
 
   const handleMenuItemClick = (index: number) => {
     setActiveSectionIndex(index);
@@ -36,14 +44,6 @@ const Menu: React.FC<MenuProps> = ({
       sectionRef.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isMobile = windowWidth <= 1080;
 
   const MenuItem: MenuItem[] = [
     {
@@ -144,23 +144,6 @@ const Menu: React.FC<MenuProps> = ({
       )}
       {isMobile && (
         <div>
-          <div className="sidebar_container">
-            <div className="sidebar">
-              <div className="menu">
-                <ul className="items">
-                  {SocialMenuItem.map((val, i) => (
-                    <li key={i} className="item">
-                      <div className="item_inner">
-                        <a href={val.link} target="_blank" rel="noreferrer">
-                          {/* Render social menu items */}
-                        </a>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
           <div className="mobile_footer_container">
             <div className="mobile_footer">
               <ul className="mobile_items">
