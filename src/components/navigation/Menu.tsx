@@ -148,12 +148,12 @@ const Menu: React.FC<MenuProps> = ({
             <div className="mobile_footer">
               <ul className="mobile_items">
                 {MenuItem.map((val, i) => (
-                  <li key={i} className="mobile_item">
+                  <li
+                    key={i}
+                    className={`mobile_item ${activeSectionIndex === i ? "active" : ""}`}
+                  >
                     <div className="mobile_item_inner">
                       <a
-                        className={
-                          i === activeSectionIndex ? val.activeClass : ""
-                        }
                         onClick={() => handleMenuItemClick(i)}
                         onDoubleClick={(e) => e.preventDefault()}
                       >
