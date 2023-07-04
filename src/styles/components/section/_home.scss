@@ -110,7 +110,8 @@
   }
   p {
     color: white;
-    font-size: 24px;
+    margin-top: 8px;
+    font-size: 16px;
     white-space: nowrap;
     animation: scrollRightToLeft 30s linear infinite;
     transform-origin: left center; 
@@ -138,10 +139,10 @@
 
   @keyframes scrollRightToLeft {
     0% {
-      transform: translateX(-20%) rotateY(20deg);
+      transform: translateX(-10%) rotateY(0deg);
     }
     100% {
-      transform: translateX(-50%) rotateY(20deg);
+      transform: translateX(-50%) rotateY(40deg);
     }
   }
 }
