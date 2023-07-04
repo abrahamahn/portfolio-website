@@ -21,17 +21,17 @@ const Home: React.FC<HomeProps> = ({
         <AboutIcon width={30} height={30} color="white"/>
       </div>
       <div className="portfolio" onClick={handlePortfolioClick}>
-        <p>View past projects and which frameworks used. View past projects and which frameworks used. View past projects and which frameworks used. View past projects and which frameworks used. View past projects and which frameworks used. View past projects and which frameworks used.</p>
+        <p>View past projects and frameworks used. View past projects and frameworks used. View past projects and frameworks used. </p>
         <h1>Portfolio</h1>
         <PortfolioIcon width={30} height={30} color="white"/>
       </div>
       <div className="blog" onClick={handleBlogClick}>
-        <p>View past articles to understand the technologies that I us. View past articles to understand the technologies that I us. View past articles to understand the technologies that I us. View past articles to understand the technologies that I us.</p>
+        <p>View past articles and blogs I wrote. View past articles and blogs I wrote. View past articles and blogs I wrote. View past articles and blogs I wrote.</p>
         <h1>Blog</h1>
         <BlogIcon width={30} height={30} color="white"/>
       </div>
       <div className="contact" onClick={handleContactClick}>
-        <p>For resume or new projects, please contact via here. For resume or new projects, please contact via here. For resume or new projects, please contact via here. For resume or new projects, please contact via here.</p>
+        <p>For resume or new projects, please contact. For resume or new projects, please contact. For resume or new projects, please contact.</p>
         <h1>Contact</h1>
         <ContactIcon width={30} height={30} color="white"/>
       </div>

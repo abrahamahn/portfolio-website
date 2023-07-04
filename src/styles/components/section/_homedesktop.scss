@@ -63,7 +63,7 @@
       }
       li a {
         text-decoration: none;
-        color: #888888;
+        color: white;
         display: inline-block;
         position: relative;
         line-height: 1;
@@ -71,13 +71,13 @@
         &:hover {
           transform: translateY(-3px);
           svg {
-            color: #88888b;
+            color: white;
             transition: all 0.3s ease;
           }
         }
         svg {
           fill: transparent;
-          color: #88888b;
+          color: white;
           width: 20px;
           height: 20px;
           @media screen and (max-width: 1080px) {
@@ -106,14 +106,14 @@
         padding: 0;
         flex: 1;
         border: 1px solid black;
-        background: rgba(0, 0, 0, 0.096);
+        background: rgba(0, 0, 0, 0.05);
         button {
           width: 120px;
           text-decoration: none;
           border-radius: 10px;
           font-weight: 400;
           color: white;
-          background: rgba(0, 0, 0, 0.5);
+          background: black;
           margin: 5px;
           font-size: 0.80rem;
           padding: 0.5rem 1rem;

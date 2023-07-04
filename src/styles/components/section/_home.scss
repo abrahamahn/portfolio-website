@@ -4,7 +4,7 @@
   height: calc(100vh - 11rem);
   margin: 15px;
   gap: 10px;
-  color: rgb(255, 255, 255);
+  color: black;
 
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 11rem);
@@ -67,6 +67,7 @@
   }
 
   p {
+    color: white;
     font-size: 60px;
     white-space: nowrap;
     animation: scrollRightToLeft 30s linear infinite;
@@ -87,6 +88,7 @@
     right: 20px;
   }
 
+  h:hover,
   h1:hover,
   svg:hover {
     color: black;
