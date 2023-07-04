@@ -95,11 +95,11 @@ const App: React.FC = () => {
               )}
             </Transition>
           ))}
+          <Menu
+            activeSectionIndex={activeSectionIndex}
+            setActiveSectionIndex={setActiveSectionIndex}
+          />
         </main>
-        <Menu
-          activeSectionIndex={activeSectionIndex}
-          setActiveSectionIndex={setActiveSectionIndex}
-        />
       </div>
     </div>
   );

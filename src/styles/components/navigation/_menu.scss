@@ -201,12 +201,13 @@
 
 .mobile_footer_container {
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
+  border-radius: 50px;
   left: 0;
   width: 100%;
   background-color: black;
   border-top: 1px solid #88888b;
-  z-index: 99;
+  z-index: 999;
   height: 50px;
   background: linear-gradient(#000000c8, #000000);
 }
@@ -228,18 +229,18 @@
     width: 100%;
     list-style-type: none;
     color: white;
-    &.active {
-      background-color: rgba(102, 102, 102, 0.507);
-      padding: 0px;
-      margin: 0px;
-      border-radius: 3px;
-    }
     .mobile_item_inner {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      &.active {
+        background-color: rgba(102, 102, 102, 0.507);
+        padding: 0px;
+        margin: 0px;
+        border-radius: 3px;
+      }
       a {
         .icons {
           width: auto;

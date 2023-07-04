@@ -1,6 +1,7 @@
 .home {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   height: calc(100vh - 11rem);
   margin: 15px;
   gap: 10px;
@@ -142,7 +143,7 @@
       transform: translateX(-10%) rotateY(0deg);
     }
     100% {
-      transform: translateX(-50%) rotateY(40deg);
+      transform: translateX(-50%) rotateY(90deg);
     }
   }
 }
