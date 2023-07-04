@@ -54,7 +54,7 @@ body {
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 50px);
     position: fixed;
-    padding: 10px;
+    padding: 5px;
     z-index: 999;
   }
   .sub_container {
@@ -68,14 +68,19 @@ body {
     border-radius: 40px;
     overflow-y: none;
     @media screen and (max-width: 1080px) {
-      height: calc(100vh - 70px);
+      height: calc(100vh - 8rem);
       width: 100%;
       z-index: 999;
     }
-    .section {
-      z-index: 0;
+    .viewpoint {
+      height: 100vh;
+      .section {
+        z-index: 0;
+        height: auto;
+      }
     }
   }
+
 }
 
 .transition {

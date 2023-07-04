@@ -7,7 +7,7 @@
   color: black;
 
   @media screen and (max-width: 1080px) {
-    height: calc(100vh - 11rem);
+    height: calc(100vh - 14.5rem);
   }
 
   .about,
@@ -68,27 +68,27 @@
 
   p {
     color: white;
-    font-size: 60px;
+    font-size: 30px;
     white-space: nowrap;
     animation: scrollRightToLeft 30s linear infinite;
     transform-origin: left center; 
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 18px;
     color: white;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
   }
 
   svg {
     position: absolute;
-    bottom: 20px;
+    bottom: 12px;
     right: 20px;
   }
-
-  h:hover,
+  
+  p:hover,
   h1:hover,
   svg:hover {
     color: black;
