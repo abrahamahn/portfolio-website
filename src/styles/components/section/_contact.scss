@@ -8,7 +8,7 @@
   margin: 0 auto;
   @media screen and (max-width: 1080px) {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 9.8rem);
   }
   .contact {
     width: 100%;
@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    color: white;
     @media screen and (max-width: 1080px) {
       padding: 0 15px;
     }
@@ -28,6 +29,7 @@
         margin-bottom: 25px;
         line-height: 1;
         margin-left: 0px;
+        color: white;
         @media screen and (max-width: 1080px) {
           font-size: 1.5rem;
         }
@@ -43,10 +45,10 @@
       }
       .form {
         width: 100%;
-        background-color: #fff;
+        background-color: #00000055;
         padding: 30px 30px 30px 30px;
         border-radius: 8px;
-        border: solid 1px #d4d4d4;
+        border: solid 1px white;
         @media screen and (max-width: 1080px) {
           width: 100%;
           padding: 30px 20px;
@@ -60,6 +62,7 @@
             font-size: 1rem;
             line-height: 1.2;
             margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.652);
             @media screen and (max-width: 1080px) {
               font-size: 0.85rem;
               padding: 0 2px;
@@ -67,7 +70,7 @@
           }
           span {
             font-weight: 500;
-            color: #000000;
+            color: #ffffff;
           }
         }
         .fields {
@@ -87,32 +90,34 @@
                 width: 100%;
                 height: 40px;
                 border: none;
-                border-bottom: 1px solid #d4d4d4;
+                border-bottom: 1px solid #ffffff;
                 background-color: transparent;
                 font-size: 0.85rem;
-                color: #000000;
+                color: #ffffff;
                 letter-spacing: 0.5;
                 font-weight: 400;
                 font-family: "Poppins";
                 padding-left: 7px !important;
+                border-radius: 5px;
                 @media screen and (max-width: 1080px) {
                   font-size: 0.75rem;
                 }
               }
               input:focus {
                 outline: none;
-                border-bottom-color: #0f172a;
-                background-color: transparent;
+                border-bottom-color: #ffffff;
+                background-color: rgba(255, 255, 255, 0.315);
+                color: rgb(255, 255, 255);
               }
               textarea {
                 margin-top: 20px;
                 width: 100%;
                 height: 220px;
-                border: solid 1px #d4d4d4;
+                border: solid 1px #ffffff50;
                 border-radius: 5px;
-                background-color: #f8f8f8;
+                background-color: transparent;
                 font-size: 0.85rem;
-                color: #7e7e7e;
+                color: #ffffff;
                 font-weight: 400;
                 letter-spacing: 0.5;
                 font-family: "Poppins";
@@ -126,8 +131,9 @@
               }
               textarea:focus {
                 outline: none;
-                border-bottom-color: #d4d4d4;
-                background-color: transparent;
+                border-bottom-color: #ffffff;
+                background-color: rgba(255, 255, 255, 0.315);
+                color: rgb(255, 255, 255);
               }
             }
             .button {
@@ -143,16 +149,18 @@
                 display: inline-block;
                 border-radius: 10px;
                 transition: all 0.3s ease;
-                background-color: black;
+                background-color: rgba(0, 0, 0, 0.633);
+                border: none;
                 @media screen and (max-width: 1080px) {
                   font-size: 0.85rem;
-                  padding: 5px 15px;
+                  padding: 8px 20px;
+                  border-radius: 5px;
                 }
               }
               button:hover {
-                color: black;
-                background-color: white;
-                border-color: #000000;
+                color: white;
+                background-color: rgb(0, 0, 0);
+                border-color: #ffffff;
               }
             }
           }

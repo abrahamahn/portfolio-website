@@ -1,0 +1,103 @@
+.home {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: calc(100vh - 11rem);
+  margin: 15px;
+  gap: 10px;
+  color: rgb(255, 255, 255);
+
+  @media screen and (max-width: 1080px) {
+    height: calc(100vh - 11rem);
+  }
+
+  .about,
+  .portfolio,
+  .blog,
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .about {
+    background-color: rgba(115, 115, 115, 0.45);
+  }
+
+  .about:hover {
+    color: black;
+    background-color: rgba(115, 115, 115, 0.85);
+  }
+
+  .portfolio {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .portfolio:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.859);
+  }
+
+  .blog {
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
+  .blog:hover {
+    background-color: rgba(0, 0, 0, 0.859);
+  }
+
+  .contact {
+    background-color: rgba(172, 172, 172, 0.65);
+  }
+
+  .contact:hover {
+    color: black;
+    background-color: rgba(172, 172, 172, 0.65);
+  }
+
+  p {
+    font-size: 60px;
+    white-space: nowrap;
+    animation: scrollRightToLeft 30s linear infinite;
+    transform-origin: left center; 
+  }
+
+  h1 {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  svg {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  h1:hover,
+  svg:hover {
+    color: black;
+  }
+
+  @keyframes scrollRightToLeft {
+    0% {
+      transform: translateX(-20%) rotateY(20deg);
+    }
+    100% {
+      transform: translateX(-50%) rotateY(20deg);
+    }
+  }
+}

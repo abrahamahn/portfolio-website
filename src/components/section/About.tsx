@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import ModalContent from "../modal";
+import ModalContent from "../resume";
 import Modal from "react-modal";
 
-import AboutData from "../../data/About";
-import SkillData from "../../data/Skill";
+import { AboutData, SkillData } from "../../data";
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
 Modal.setAppElement("#root");

@@ -1,6 +1,9 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk, { ThunkAction, ThunkDispatch } from 'redux-thunk';
-
+import { 
+  createStore, 
+  combineReducers, 
+  applyMiddleware 
+} from 'redux';
 // Define the initial state interface
 interface AppState {
   activeSectionIndex: number | null;

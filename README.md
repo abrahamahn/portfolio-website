@@ -2,4 +2,4 @@
 
 ## Link: <https://abrahamahn.com/>
 
-Built with Reactjs, Typescreipt, TailwindCSS, and SCSS- deployed on Netlify.
+Built with React js, Typescreipt, TailwindCSS, Redux, and SCSS- deployed on Netlify.

@@ -1,23 +1,23 @@
 import React from "react";
 import ReactTyped from "react-typed";
 
-import HeroData from "../../data/Hero";
-import SocialMediaData from "../../data/SocialMedia";
+import { HeaderData, SocialMediaData } from "../../data";
+import { SocialMediaItem } from '../../data/types'
 
-interface HeroProps {
+interface HomeDesktopProps {
   handlePortfolioClick: () => void;
-  handleResumeClick: () => void;
+  handleContactClick: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({
+const HomeDesktop: React.FC<HomeDesktopProps> = ({
   handlePortfolioClick,
-  handleResumeClick,
+  handleContactClick,
 }) => {
   return (
-    <div className="hero" id="home">
+    <div className="homedesktop" id="home">
       <div className="content">
         <div className="extra">
-          <h5 className="name">{HeroData.name}</h5>
+          <h5 className="name">{HeaderData.name}</h5>
           <h1
             className="title"
             data-aos="fade-up"
@@ -44,10 +44,10 @@ const Hero: React.FC<HeroProps> = ({
               />
             </span>
           </h1>
-          <p className="text">{HeroData.description}</p>
+          <p className="text">{HeaderData.description}</p>
           <div className="social">
             <ul>
-              {SocialMediaData.map((val, i) => (
+              {SocialMediaData.map((val: SocialMediaItem, i: number) => (
                 <li key={i}>
                   <a href={val.link} target="_blank" rel="noreferrer">
                     {val.iconName}
@@ -61,13 +61,14 @@ const Hero: React.FC<HeroProps> = ({
               <button onClick={handlePortfolioClick}>Portfolio</button>
             </div>
             <div className="resume_button">
-              <button onClick={handleResumeClick}>Resume</button>
+              <button onClick={handleContactClick}>Resume</button>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
 
-export default Hero;
+export default HomeDesktop;

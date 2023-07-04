@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from 'react-swipeable';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import ScrollToTopOnMount from '../navigation/ScrollToTopOnMount';
-import HideBottomMenuBarOnScroll from '../navigation/HideBottomMenuBarOnScroll';
 
-import PortfolioData from '../../data/Portfolio';
-
-interface PortfolioItem {
-  postedDate: string;
-  link: string;
-  image: string;
-  alt: string;
-  title: string;
-  categories: string[];
-  stacks: string[];
-  description: string;
-}
+import { PortfolioData } from '../../data';
+import { PortfolioItem } from '../../data/types'
 
 const Portfolio: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -74,7 +62,7 @@ const Portfolio: React.FC = () => {
   }, [currentPage]);
 
   const renderPortfolioItems = () => {
-    return (PortfolioData as PortfolioItem[])
+    return (PortfolioData )
       .sort((a, b) => new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime())
       .map((portfolio: PortfolioItem, index: number) => (
         <div
@@ -147,11 +135,6 @@ const Portfolio: React.FC = () => {
       className="portfolio_container"
       id="portfolio"
     >
-      <ScrollToTopOnMount />
-      <HideBottomMenuBarOnScroll />
-      <div className="title_container">
-        <h2 className="title">Portfolio</h2>
-      </div>
       <div className={`portfolio${isMobile ? " scrollable" : ""}`}>
         {!isMobile && (
           <FaAngleLeft

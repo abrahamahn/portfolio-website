@@ -1,11 +1,13 @@
-@import "main/typography";
+@import "./typography";
+@import "./app";
 
-@import "main/base";
+@import "components/navigation/header";
+@import "components/navigation/menu";
+@import "components/navigation/modal";
 
-@import "components/modal";
-@import "components/about";
-@import "components/blog";
-@import "components/contact";
-@import "components/hero";
-@import "components/menu";
-@import "components/portfolio";
+@import "components/section/home";
+@import "components/section/homedesktop";
+@import "components/section/about";
+@import "components/section/portfolio";
+@import "components/section/blog";
+@import "components/section/contact";

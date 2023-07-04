@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from 'react-swipeable';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import ScrollToTopOnMount from '../navigation/ScrollToTopOnMount';
-import HideBottomMenuBarOnScroll from '../navigation/HideBottomMenuBarOnScroll';
 
-import BlogData from '../../data/Blog';
-
-interface BlogItem {
-  postedDate: string;
-  link: string;
-  image: string;
-  alt: string;
-  title: string;
-  categories: string[];
-  description: string;
-}
+import { BlogData } from "../../data";
 
 const Blog: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -140,11 +128,6 @@ const Blog: React.FC = () => {
       className="blog_container"
       id="blog"
     >
-      <ScrollToTopOnMount />
-      <HideBottomMenuBarOnScroll />
-      <div className="title_container">
-        <h2 className="title">Blog</h2>
-      </div>
       <div className={`blog${isMobile ? " scrollable" : ""}`}>
         {!isMobile && (
           <FaAngleLeft

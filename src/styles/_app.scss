@@ -39,13 +39,6 @@ body {
   color: #88888b;
 }
 
-main {
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-
-
 .main_container {
   z-index: 999;
   width: 100%;
@@ -55,29 +48,34 @@ main {
   padding: 20px;
   position: fixed;
   margin: 0 auto;
+  background: linear-gradient(-45deg, #52d1ee, #3c4ae7, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
   @media screen and (max-width: 1080px) {
     height: calc(100vh - 50px);
     position: fixed;
     padding: 10px;
     z-index: 999;
   }
-}
-
-.sub_container {
-  width: 100%;
-  height: calc(100vh - 40px);
-  border: 1px solid black;
-  clear: both;
-  float: center;
-  margin: 0 auto;
-  @media screen and (max-width: 1080px) {
-    height: calc(100vh - 70px);
+  .sub_container {
     width: 100%;
+    height: calc(100vh - 40px);
+    border: 3px double rgb(0, 0, 0);
+    clear: both;
+    float: center;
+    margin: 0 auto;
+    background-color: hsla(0, 0%, 100%, 0.119);
+    border-radius: 40px;
+    overflow-y: none;
+    @media screen and (max-width: 1080px) {
+      height: calc(100vh - 70px);
+      width: 100%;
+      z-index: 999;
+    }
+    .section {
+      z-index: 0;
+    }
   }
-}
-
-.section {
-  z-index: 0;
 }
 
 .transition {
@@ -99,3 +97,18 @@ main {
 .transition-exited {
   opacity: 0;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
