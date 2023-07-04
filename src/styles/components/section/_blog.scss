@@ -9,15 +9,17 @@
   align-items: center;
   position: relative;
   @media screen and (max-width: 1080px) {
-    height: calc(100vh - 14.1rem);
-    z-index: 0;
+    height: calc(100vh - 15.1rem);
   }
   .title_container {
     width: 100%;
     max-width: 1010px;
     @media screen and (max-width: 1080px) {
       height: 2.5rem;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0);
+      z-index: 1;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
     }
     .title {
       padding: 10px;
