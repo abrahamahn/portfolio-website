@@ -76,6 +76,9 @@ const App: React.FC = () => {
   return (
     <div className="main_container" style={{ height: `${windowHeight}px`, overflow: 'hidden' }}>
       <div className="sub_container">
+        <div className="header_container">
+          <Header />
+        </div>  
         <main className="viewpoint">
           <AnimatedCursor
             innerSize={16}
@@ -85,7 +88,6 @@ const App: React.FC = () => {
             innerScale={0.8}
             outerScale={1.4}
           />
-          <Header />
           {sections.map((Section, index) => (
             <Transition in={activeSectionIndex === index} timeout={250} key={index}>
               {(state) => (
@@ -95,11 +97,11 @@ const App: React.FC = () => {
               )}
             </Transition>
           ))}
-          <Menu
-            activeSectionIndex={activeSectionIndex}
-            setActiveSectionIndex={setActiveSectionIndex}
-          />
         </main>
+        <Menu
+          activeSectionIndex={activeSectionIndex}
+          setActiveSectionIndex={setActiveSectionIndex}
+        />
       </div>
     </div>
   );

@@ -104,7 +104,7 @@
           height: 100%;
           top: 0px;
           left: 0px;
-          background-color: #eeeeee;
+          background-color: #eeeeee49;
           border-radius: 6px;
           z-index: -1;
           transition: all 0.4s ease;
@@ -200,16 +200,16 @@
 }
 
 .mobile_footer_container {
-  position: fixed;
-  bottom: 10px;
-  border-radius: 50px;
+  bottom: 0px;
   left: 0;
   width: 100%;
-  background-color: black;
+  position: absolute;
   border-top: 1px solid #88888b;
   z-index: 999;
   height: 50px;
-  background: linear-gradient(#000000c8, #000000);
+  background: linear-gradient(#0000008d, #000000);
+  border-top: black;
+  
 }
 
 .mobile_footer {

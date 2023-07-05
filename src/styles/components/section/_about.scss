@@ -7,8 +7,7 @@
   align-items: center;
   overflow: auto;
   @media screen and (max-width: 1080px) {
-    height: calc(100vh - 8.9rem);
-    border-radius: 0px 0px 35px 35px;
+    height: calc(100vh - 122px);
   }
   .about {
     max-width: 800px;
@@ -17,6 +16,7 @@
     clear: both;
     display: flex;
     align-items: center;
+    padding: 10px;
     margin: 15px;
     border-radius: 15px;
     background-color: #00000030;
@@ -33,8 +33,9 @@
       padding-right: 10px;
       height: 100%;
       @media screen and (max-width: 1080px) {
+        height: 40%;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 30px;
       }
       .about_title {
         margin-top: 0px;
