@@ -22,7 +22,8 @@ const About: React.FC = () => {
             <h3>{AboutData.title}</h3>
           </div>
           <div className="info">
-            <p>{AboutData.description}</p>
+            <p>{AboutData.paragraph1}</p>
+            <p>{AboutData.paragraph2}</p>
             <div className="skills">
               {SkillData.map((val, i: number) => (
                 <div className="progress_inner" key={i}>
