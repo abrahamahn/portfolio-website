@@ -1,148 +1,202 @@
 .home {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: calc(100vh - 11rem);
-  margin: 15px;
-  gap: 10px;
-  color: black;
-
-  @media screen and (max-width: 1080px) {
-    height: calc(100vh - 17rem);
-  }
-
-  .about,
-  .portfolio,
-  .blog,
-  .contact {
+  .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 30px;
-    cursor: pointer;
+    margin: 15px;
+    cursor: none;
     border: 1px solid black;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
     position: relative;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 20px 20px;
     overflow: hidden;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-
-  .about {
-    background-color: rgba(115, 115, 115, 0.45);
-  }
-
-  .about:hover {
-    color: black;
-    background-color: rgba(115, 115, 115, 0.85);
-  }
-  .about::after {
-    content: "";
-    position: absolute;
-    bottom: 0rem;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.188));
-  }
-
-  .portfolio {
+    width: calc(100% - 30px);
+    height: 8.2rem;
     background-color: rgba(255, 255, 255, 0.45);
-  }
-
-  .portfolio:hover {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.859);
-  }
-
-  .portfolio::after {
-    content: "";
-    position: absolute;
-    bottom: 0rem;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.188));
-  }
-
-  .blog {
-    background-color: rgba(0, 0, 0, 0.45);
-  }
-
-  .blog:hover {
-    background-color: rgba(0, 0, 0, 0.859);
-  }
-
-  .blog::after {
-    content: "";
-    position: absolute;
-    bottom: 0rem;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.188));
-  }
-
-  .contact {
-    background-color: rgba(172, 172, 172, 0.65);
-  }
-
-  .contact:hover {
-    color: black;
-    background-color: rgba(172, 172, 172, 0.65);
-  }
-
-  .contact::after {
-    content: "";
-    position: absolute;
-    bottom: 0rem;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.188));
-  }
-  p {
-    color: white;
-    margin-top: 8px;
-    font-size: 16px;
-    white-space: nowrap;
-    animation: scrollRightToLeft 30s linear infinite;
-    transform-origin: left center; 
-  }
-
-  h1 {
-    font-size: 18px;
-    color: white;
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-  }
-
-  svg {
-    position: absolute;
-    bottom: 12px;
-    right: 20px;
-  }
-  
-  p:hover,
-  h1:hover,
-  svg:hover {
-    color: black;
-  }
-
-  @keyframes scrollRightToLeft {
-    0% {
-      transform: translateX(-10%) rotateY(0deg);
+    p {
+      font-size: 16px;
+      color: white;
+      margin: 0 auto;
     }
-    100% {
-      transform: translateX(-50%) rotateY(40deg);
+  }
+
+  .hero:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12));
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    height: calc(100vh - 20rem);
+    margin: 15px;
+    gap: 15px;
+    color: black;
+    .about,
+    .portfolio,
+    .blog,
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 30px;
+      cursor: none;
+      border: 1px solid black;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      padding: 20px 0px 20px 20px;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
+
+    .about {
+      background-color: rgba(115, 115, 115, 0.45);
+    }
+
+    .about:hover {
+      color: black;
+      background-color: rgba(115, 115, 115, 0.85);
+    }
+
+    .about::after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12));
+    }
+
+    .portfolio {
+      background-color: rgba(255, 255, 255, 0.45);
+    }
+
+    .portfolio:hover {
+      color: black;
+      background-color: rgba(255, 255, 255, 0.859);
+    }
+
+    .portfolio::after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12));
+    }
+
+    .blog {
+      background-color: rgba(79, 79, 79, 0.45);
+    }
+
+    .blog:hover {
+      background-color: rgba(79, 79, 79, 0.859);
+    }
+
+    .blog::after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12));
+    }
+
+    .contact {
+      background-color: rgba(172, 172, 172, 0.65);
+    }
+
+    .contact:hover {
+      color: black;
+      background-color: rgba(172, 172, 172, 0.85);
+    }
+
+    .contact::after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12));
+    }
+    p {
+      color: white;
+      margin-top: 8px;
+      font-size: 16px;
+      white-space: nowrap;
+      animation: scrollRightToLeft 30s linear infinite;
+      transform-origin: left center; 
+      display: none;
+    }
+
+    h1 {
+      font-size: 18px;
+      color: white;
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+    }
+
+    svg {
+      position: absolute;
+      bottom: 12px;
+      right: 20px;
+    }
+    
+    p:hover,
+    h1:hover,
+    svg:hover {
+      color: black;
+    }
+
+    @keyframes scrollRightToLeft {
+      0% {
+        transform: translateX(-10%) rotateY(0deg);
+      }
+      100% {
+        transform: translateX(-50%) rotateY(40deg);
+      }
+    }
+  }
+
+  .hero:hover p,
+  .about:hover p,
+  .portfolio:hover p,
+  .blog:hover p,
+  .contact:hover p,
+  .hero:hover h1,
+  .about:hover h1,
+  .portfolio:hover h1,
+  .blog:hover h1,
+  .contact:hover h1,
+  .hero:hover svg,
+  .about:hover svg,
+  .portfolio:hover svg,
+  .blog:hover svg,
+  .contact:hover svg {
+    color: black;
   }
 }

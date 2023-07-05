@@ -48,7 +48,7 @@ body {
   padding: 20px;
   position: absolute;
   margin: 0 auto;
-  background: linear-gradient(-45deg, #52d1ee, #3c4ae7, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #7ed6ea, #7b84e1, #76bdd7, #7ad2bd);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   overflow-y: hidden;
@@ -64,7 +64,7 @@ body {
     clear: both;
     float: center;
     margin: 0 auto;
-    background-color: hsla(0, 0%, 0%, 0.30);
+    background-color: hsla(0, 0%, 0%, 0.10);
     border-radius: 40px;
     overflow-y: none;
     @media screen and (max-width: 1080px) {
