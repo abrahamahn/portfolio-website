@@ -12,6 +12,7 @@ import About from './components/section/About';
 import Blog from './components/section/Blog';
 import Portfolio from './components/section/Portfolio';
 import Contact from './components/section/Contact';
+import Div100vh from 'react-div-100vh';
 import { setActiveSection, RootState, AppDispatch } from './store/store';
 
 type SectionType = () => ReactNode;
@@ -64,45 +65,51 @@ const App: React.FC = () => {
     dispatch(setActiveSection(index));
   };
 
-  // Store the initial window height in state
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    handleResize(); // Update initial window width
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div className="main_container" style={{ height: `${windowHeight}px`, overflow: 'hidden' }}>
-      <div className="sub_container">
-        <div className="header_container">
-          <Header />
-        </div>  
-        <main className="viewpoint">
-          <AnimatedCursor
-            innerSize={16}
-            outerSize={28}
-            color="200,200,200"
-            outerAlpha={0.5}
-            innerScale={0.8}
-            outerScale={1.4}
-          />
-          {sections.map((Section, index) => (
-            <Transition in={activeSectionIndex === index} timeout={250} key={index}>
-              {(state) => (
-                <div className={`transition transition-${state}`}>
-                  {activeSectionIndex === index && <Section />}
-                </div>
-              )}
-            </Transition>
-          ))}
-        </main>
-        <Menu
-          activeSectionIndex={activeSectionIndex}
-          setActiveSectionIndex={setActiveSectionIndex}
-        />
-      </div>
+    <div>
+      <Div100vh>
+        <div className="main_container">
+          <div className="sub_container">
+            <div className="header_container">
+              <Header />
+            </div>
+            <main className="viewpoint">
+              <AnimatedCursor
+                innerSize={16}
+                outerSize={28}
+                color="200,200,200"
+                outerAlpha={0.5}
+                innerScale={0.8}
+                outerScale={1.4}
+              />
+              {sections.map((Section, index) => (
+                <Transition in={activeSectionIndex === index} timeout={250} key={index}>
+                  {(state) => (
+                    <div className={`transition transition-${state}`}>
+                      {activeSectionIndex === index && <Section />}
+                    </div>
+                  )}
+                </Transition>
+              ))}
+            </main>
+            <Menu
+              activeSectionIndex={activeSectionIndex}
+              setActiveSectionIndex={setActiveSectionIndex}
+            />
+          </div>
+        </div>
+      </Div100vh>
     </div>
   );
 };
