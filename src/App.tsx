@@ -17,7 +17,7 @@ type SectionType = () => ReactNode;
 
 const App: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const isMobile = windowWidth <= 768;
+  const isMobile = /iPhone|iPad|iPod/.test(navigator.userAgent);
 
   const dispatch: AppDispatch = useDispatch();
   const activeSectionIndex = useSelector((state: RootState) => state.app.activeSectionIndex);

@@ -7,7 +7,7 @@
   flex-direction: row;
   border-bottom: 1px solid black;
   background-color: rgba(0, 0, 0, 0.669);
-  padding: 0.2rem 0rem 0rem 1.5rem;
+  padding: 0.3rem 0rem 0rem 1.5rem;
   border-radius: 0px;
   .left {
     flex: 1;
@@ -49,20 +49,23 @@
         border: solid 1px rgba(0, 0, 0, 0.478);
         border-radius: 100%;
         padding: 8px;
+        width: 35px;
+        height: 35px;
         a {
           text-decoration: none;
           display: inline-block;
           position: relative;
-          line-height: 1;
+          width: 18px;
+          height: 18px;
           &:hover {
             transform: translateY(-3px);
           }
           svg {
             fill: transparent;
             color: rgb(255, 255, 255);
-            width: 20px;
+            width: 18px;
             height: 18px;
-            padding: 4px 0px 0px 1px;
+            padding: 0px 0px 0px px;
           }
         }
       }

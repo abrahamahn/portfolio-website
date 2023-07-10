@@ -7,6 +7,7 @@ import { PortfolioItem } from '../../data/types'
 
 const Portfolio: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -62,6 +63,8 @@ const Portfolio: React.FC = () => {
   }, [currentPage]);
 
   const renderPortfolioItems = () => {
+    const filteredItems = PortfolioData;
+
     return (PortfolioData )
       .sort((a, b) => new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime())
       .map((portfolio: PortfolioItem, index: number) => (

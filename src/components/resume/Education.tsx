@@ -9,12 +9,6 @@ interface EducationItem {
 
 const educationContent: EducationItem[] = [
   {
-    year: "2021 - 2024",
-    img: "/assets/company/usc.jpg",
-    institute: "UNIVERSITY OF SOUTHERN CALIFORNIA",
-    degree: "B.S. Computer Science",
-  },
-  {
     year: "2011 - 2015",
     img: "/assets/company/usc.jpg",
     institute: "UNIVERSITY OF SOUTHERN CALIFORNIA",
@@ -39,8 +33,8 @@ const Education: React.FC = () => {
           <span className="time open-sans-font text-uppercase">{val.year}</span>
           <h5 className="poppins-font text-uppercase">
             {val.institute}
-            <span className="place open-sans-font">{val.degree}</span>
           </h5>
+          <h5 className="place open-sans-font">{val.degree}</h5>
         </li>
       ))}
     </ul>
