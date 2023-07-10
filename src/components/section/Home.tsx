@@ -1,5 +1,9 @@
 import React from "react";
-import { AboutIcon, PortfolioIcon, BlogIcon, ContactIcon } from '../icons/menu'
+import ReactTyped from "react-typed";
+
+import { HeaderData, SocialMediaData } from "../../data";
+import { SocialMediaItem } from '../../data/types'
+
 interface HomeProps {
   handleAboutClick: () => void;
   handlePortfolioClick: () => void;
@@ -7,43 +11,66 @@ interface HomeProps {
   handleContactClick: () => void;
 }
 
-const Home: React.FC<HomeProps> = ({
-  handleAboutClick,
+const HomeDesktop: React.FC<HomeProps> = ({
   handlePortfolioClick,
-  handleBlogClick,
   handleContactClick,
 }) => {
   return (
-    <div className="home">
-      <div className="hero">
-        
-        <p>Creating the best digital web experiences.</p>
+    <div className="home" id="home">
+      <div className="content">
+        <div className="extra">
+          <h5 className="name">{HeaderData.name}</h5>
+          <h1
+            className="title"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="200">
+            <span className="typer-toper">
+              <ReactTyped
+                loop
+                typeSpeed={125}
+                backSpeed={25}
+                strings={[
+                  "Software Engineer.",
+                  "Web Designer.",
+                  "Marketing Manager.",
+                ]}
+                smartBackspace
+                shuffle={false}
+                backDelay={1}
+                fadeOut={false}
+                fadeOutDelay={100}
+                loopCount={0}
+                showCursor
+                cursorChar="|"
+              />
+            </span>
+          </h1>
+          <p className="text">{HeaderData.description}</p>
+          <div className="social">
+            <ul>
+              {SocialMediaData.map((val: SocialMediaItem, i: number) => (
+                <li key={i}>
+                  <a href={val.link} target="_blank" rel="noreferrer">
+                    {val.iconName}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="button_container">
+            <div className="portfolio_button">
+              <button onClick={handlePortfolioClick}>Portfolio</button>
+            </div>
+            <div className="resume_button">
+              <button onClick={handleContactClick}>Resume</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="grid">
-        <div className="about" onClick={handleAboutClick}>
-          <h1>About</h1>
-          <AboutIcon width={24} height={24} color="white"/>
-        </div>
-        <div className="portfolio" onClick={handlePortfolioClick}>
-          <p>View past projects and frameworks used. View past projects and frameworks used. View past projects and frameworks used. </p>
-          <h1>Portfolio</h1>
-          <PortfolioIcon width={24} height={24} color="white"/>
-        </div>
-        <div className="blog" onClick={handleBlogClick}>
-          <p>View past articles and blogs I wrote. View past articles and blogs I wrote. View past articles and blogs I wrote. View past articles and blogs I wrote.</p>
-          <h1>Blog</h1>
-          <BlogIcon width={24} height={24} color="white"/>
-        </div>
-        <div className="contact" onClick={handleContactClick}>
-          <p>For resume or new projects, please contact. For resume or new projects, please contact. For resume or new projects, please contact.</p>
-          <h1>Contact</h1>
-          <ContactIcon width={24} height={24} color="white"/>
-        </div>
-      </div>
-
+      
     </div>
   );
 };
 
-export default Home;
-
+export default HomeDesktop;

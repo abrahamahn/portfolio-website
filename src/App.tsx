@@ -7,12 +7,10 @@ import Header from './components/navigation/Header';
 import Menu from './components/navigation/Menu';
 
 import Home from './components/section/Home';
-import HomeDesktop from './components/section/HomeDesktop';
 import About from './components/section/About';
 import Blog from './components/section/Blog';
 import Portfolio from './components/section/Portfolio';
 import Contact from './components/section/Contact';
-import Div100vh from 'react-div-100vh';
 import { setActiveSection, RootState, AppDispatch } from './store/store';
 
 type SectionType = () => ReactNode;
@@ -41,20 +39,12 @@ const App: React.FC = () => {
   };
 
   const sections: SectionType[] = [
-    () =>
-      isMobile ? (
-        <Home
-          handleAboutClick={handleAboutClick}
-          handlePortfolioClick={handlePortfolioClick}
-          handleBlogClick={handleBlogClick}
-          handleContactClick={handleContactClick}
-        />
-      ) : (
-        <HomeDesktop
-          handlePortfolioClick={handlePortfolioClick}
-          handleContactClick={handleContactClick}
-        />
-      ),
+    () => <Home
+            handleAboutClick={handleAboutClick}
+            handlePortfolioClick={handlePortfolioClick}
+            handleBlogClick={handleBlogClick}
+            handleContactClick={handleContactClick}
+          />,
     () => <About />,
     () => <Portfolio />,
     () => <Blog />,
@@ -78,34 +68,32 @@ const App: React.FC = () => {
 
   return (
     <div>
-        <div className="main_container">
-          <div className="sub_container">
-            <Header />
-            <main className="viewpoint">
-              <AnimatedCursor
-                innerSize={16}
-                outerSize={28}
-                color="200,200,200"
-                outerAlpha={0.5}
-                innerScale={0.8}
-                outerScale={1.4}
-              />
-              {sections.map((Section, index) => (
-                <Transition in={activeSectionIndex === index} timeout={250} key={index}>
-                  {(state) => (
-                    <div className={`transition transition-${state}`}>
-                      {activeSectionIndex === index && <Section />}
-                    </div>
-                  )}
-                </Transition>
-              ))}
-            </main>
-          </div>
-          <Menu
-            activeSectionIndex={activeSectionIndex}
-            setActiveSectionIndex={setActiveSectionIndex}
+      <div className="main_container">
+        <div className="sub_container">
+          <Header />
+          <AnimatedCursor
+            innerSize={16}
+            outerSize={28}
+            color="200,200,200"
+            outerAlpha={0.5}
+            innerScale={0.8}
+            outerScale={1.4}
           />
+          {sections.map((Section, index) => (
+            <Transition in={activeSectionIndex === index} timeout={250} key={index}>
+              {(state) => (
+                <div className={`transition transition-${state}`}>
+                  {activeSectionIndex === index && <Section />}
+                </div>
+              )}
+            </Transition>
+          ))}
         </div>
+      </div>
+      <Menu
+        activeSectionIndex={activeSectionIndex}
+        setActiveSectionIndex={setActiveSectionIndex}
+      />
     </div>
   );
 };

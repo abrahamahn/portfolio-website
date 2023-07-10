@@ -8,45 +8,8 @@
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 122px);
+    height: calc(100vh - 140px);
   }
-  .title_container {
-    width: 100%;
-    max-width: 1010px;
-    @media screen and (max-width: 768px) {
-      height: 2.5rem;
-      background-color: rgba(255, 255, 255, 0);
-      z-index: 1;
-      border-top-left-radius: 35px;
-      border-top-right-radius: 35px;
-    }
-    .title {
-      padding: 10px;
-      height: auto;
-      clear: both;
-      align-items: flex-start;
-      margin-left: 30px;
-      @media screen and (max-width: 768px) {
-        font-size: 1.25rem;
-        text-align: left;
-        margin-left: 15px;
-        color: black;
-        align-items: center;
-        margin-top: -2px;
-      }
-      h3 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        padding-bottom: 20px;
-        text-align: right;
-        @media screen and (max-width: 768px) {
-          font-size: 1rem;
-          text-align: right;
-        }
-      }
-    }
-  }
-
   .portfolio {
     width: 100%;
     max-width: 1010px;
@@ -63,7 +26,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      border-radius: 0px 0px 35px 35px;
     }
 
     .carousel_container {
@@ -79,10 +41,10 @@
       @media screen and (max-width: 768px) {
         width: 100%;
         max-width: 800px;
-        height: 100vh;
         margin: 0 auto;
         overflow-y: auto;
         padding: 20px 5px;
+        padding-bottom: 50px;
       }
       &.transition-enabled {
         transition: transform 0.3s ease-in-out;
@@ -99,7 +61,6 @@
         transition: background-color 0.3s ease-in-out;
         @media screen and (max-width: 768px) {
           width: 90%;
-          height: 11.2rem;
           max-width: 1020px;
         }
         &:hover {

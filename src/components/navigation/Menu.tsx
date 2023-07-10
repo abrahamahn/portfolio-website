@@ -16,12 +16,6 @@ interface MenuItem {
   itemName: string;
   activeClass: string;
 }
-
-interface SocialMenuItem {
-  name: string;
-  link: string;
-}
-
 const Menu: React.FC<MenuProps> = ({
   activeSectionIndex,
   setActiveSectionIndex,
@@ -93,24 +87,6 @@ const Menu: React.FC<MenuProps> = ({
     },
   ];
 
-  const SocialMenuItem: SocialMenuItem[] = [
-    {
-      name: "Github.",
-      link: "https://www.github.com/abrahamahn",
-    },
-    {
-      name: "Linkedin.",
-      link: "https://www.linkedin.com/in/abrahamahn/",
-    },
-    {
-      name: "Twitter.",
-      link: "https://twitter.com/satmorningrain",
-    },
-    {
-      name: "Medium.",
-      link: "https://medium.com/@abrahamahn",
-    },
-  ];
 
   return (
     <div>

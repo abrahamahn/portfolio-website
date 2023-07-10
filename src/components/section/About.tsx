@@ -32,7 +32,7 @@ const About: React.FC = () => {
                     <div className="bar">
                       <div
                         className="bar_inner"
-                        style={{ width: val.skillPercent || + "%" }}
+                        style={{ width: val.skillPercent + "%" }}
                       ></div>
                     </div>
                   </div>

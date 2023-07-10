@@ -6,8 +6,13 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
-  @media screen and (max-width: 768px) {
-    height: calc(100vh - 122px);
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
   }
   .about {
     max-width: 800px;
@@ -21,8 +26,9 @@
     border-radius: 15px;
     background-color: #00000030;
     border: solid 1px white;
-    @media screen and (max-width: 768px) {
-      height: 50vh;
+    @media screen and (max-width: 1080px) {
+      height: 100%;
+      margin-top: -20px;
     }
     .left_div {
       display: flex;
@@ -32,10 +38,10 @@
       padding-left: 20px;
       padding-right: 10px;
       height: 100%;
-      @media screen and (max-width: 768px) {
-        height: 40%;
+      @media screen and (max-width: 1080px) {
         width: 100%;
-        padding: 0 30px;
+        padding: 20px;
+        margin: 0 auto;
       }
       .about_title {
         margin-top: 0px;
@@ -43,7 +49,7 @@
           font-size: 3rem;
           font-weight: 600;
           color: white;
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1080px) {
             font-size: 1.5rem;
             margin-left: -3px;
           }
@@ -53,16 +59,18 @@
         width: 100%;
         float: left;
         color: white;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1080px) {
+          margin-top: 10px;
           width: 100%;
           padding-left: 0px;
         }
         p {
           font-size: 0.85rem;
           max-width: 90%;
-          @media screen and (max-width: 768px) {
-            margin-top: 30px;
+          @media screen and (max-width: 1080px) {
+            margin-top: 0px;
             font-size: 0.85rem;
+            line-height: 1rem;
             max-width: 100%;
           }
         }
@@ -72,7 +80,7 @@
           padding-top: 20px;
           flex-wrap: wrap;
           margin: 13px -20px 20px;
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1080px) {
             margin: 13px -10px 20px;
             padding-top: 0px;
           }
@@ -80,7 +88,7 @@
             width: 50%;
             padding: 0 20px;
             margin-bottom: 10px;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1080px) {
               width: 50%;
               padding: 0 10px;
               margin-bottom: 5px;
@@ -91,7 +99,8 @@
               color: #ffffff;
               margin-bottom: 10px;
               display: inline-block;
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 1080px) {
+                font-weight: 600;
                 font-size: 0.8rem;
                 margin-bottom: 3px;
                 margin-left: 2px;
@@ -157,7 +166,7 @@
       justify-content: center;
       align-items: center;
       padding-right: 20px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1080px) {
         display: none;
       }
       .image {
@@ -207,7 +216,7 @@
     @media (max-width: 992px) {
       width: 700px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       width: 560px;
     }
     @media (max-width: 599px) {
@@ -306,7 +315,10 @@
     border-radius: 100%;
     color: #fff;
     background-color: #000000;
-    background-size: cover;
+    background-size: contain;
+    img {
+      border-radius: 100%;
+    }
   }
 
   h5 {
@@ -319,6 +331,7 @@
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.1;
+    
   }
 
   .place {
@@ -326,17 +339,7 @@
     font-weight: 600;
     font-size: 14px;
     position: relative;
-    padding-left: 26px;
-    &:before {
-      position: absolute;
-      content: "";
-      width: 10px;
-      height: 2px;
-      background-color: #444;
-      left: 7px;
-      top: 9px;
-      opacity: 0.8;
-    }
+    padding-left: 0px;
   }
 }
 .achievements-wrapper {
@@ -354,7 +357,7 @@
       font-weight: 600;
       border: none;
       padding: 0;
-      color: #161616;
+      color: white;
       &::after {
         content: "+";
         position: absolute;
@@ -369,7 +372,7 @@
       padding-left: 45px;
       font-size: 14px;
       line-height: 1.2;
-      color: #88888b;
+      color: white;
       @media (max-width: 599px) {
         padding-left: 0;
         &::before {
@@ -390,7 +393,7 @@
   .col-6 {
     margin-top: 0;
     margin-bottom: 20px;
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
       flex: 0 0 auto;
       width: 100%;
     }
@@ -445,6 +448,7 @@
       font-size: 12px;
       padding: 3px 10px;
       border-radius: 5px;
+      margin-left: -11px;
     }
     h5 {
       font-size: 15px;
@@ -486,5 +490,9 @@
   .custom-modal.about-popup-wrapper .modalbox .description_wrap {
     padding: 10px;
     margin: 0px;
+  }
+  .close-modal {
+    top: 10px;
+    right: 10px;
   }
 } 
