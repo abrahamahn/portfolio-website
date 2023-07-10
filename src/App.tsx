@@ -17,6 +17,8 @@ type SectionType = () => ReactNode;
 
 const App: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [modalOpen, setModalOpen] = useState(false); // Add modalOpen state
+
   const isMobile = /iPhone|iPad|iPod/.test(navigator.userAgent);
 
   const dispatch: AppDispatch = useDispatch();
@@ -68,7 +70,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <div className="main_container">
+      <div className={`main_container ${modalOpen ? 'disable-animation' : ''}`}>
         <div className="sub_container">
           <Header />
           <AnimatedCursor
