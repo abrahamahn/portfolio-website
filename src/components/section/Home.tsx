@@ -11,9 +11,9 @@ interface HomeProps {
   handleContactClick: () => void;
 }
 
-const HomeDesktop: React.FC<HomeProps> = ({
+const Home: React.FC<HomeProps> = ({
+  handleAboutClick,
   handlePortfolioClick,
-  handleContactClick,
 }) => {
   return (
     <div className="home" id="home">
@@ -63,7 +63,7 @@ const HomeDesktop: React.FC<HomeProps> = ({
               <button onClick={handlePortfolioClick}>Portfolio</button>
             </div>
             <div className="resume_button">
-              <button onClick={handleContactClick}>Resume</button>
+              <button onClick={handleAboutClick}>Resume</button>
             </div>
           </div>
         </div>
@@ -73,4 +73,4 @@ const HomeDesktop: React.FC<HomeProps> = ({
   );
 };
 
-export default HomeDesktop;
+export default Home;

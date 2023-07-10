@@ -10,7 +10,7 @@ Modal.setAppElement("#root");
 const About: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  function toggleModalOne() {
+  function toggleModal() {
     setIsOpen(!isOpen);
   }
 
@@ -43,9 +43,9 @@ const About: React.FC = () => {
               <button
                 type="submit"
                 className="learn_more"
-                onClick={toggleModalOne}
+                onClick={toggleModal}
               >
-                Learn More
+                View Details
               </button>
             </div>
           </div>
@@ -67,14 +67,14 @@ const About: React.FC = () => {
       </div>
       <Modal
         isOpen={isOpen}
-        onRequestClose={toggleModalOne}
+        onRequestClose={toggleModal}
         AboutLabel="My dialog"
         className="custom-modal about-popup-wrapper"
         overlayClassName="custom-overlay "
         closeTimeoutMS={500}
       >
         <div className="modalbox">
-          <button className="close-modal" onClick={toggleModalOne}>
+          <button className="close-modal" onClick={toggleModal}>
             <img src="/assets/sidebar/cancel.svg" alt="close icon" />
           </button>
           <div className="box_inner">
