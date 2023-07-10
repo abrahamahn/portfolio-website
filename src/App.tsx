@@ -78,12 +78,9 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Div100vh>
         <div className="main_container">
           <div className="sub_container">
-            <div className="header_container">
-              <Header />
-            </div>
+            <Header />
             <main className="viewpoint">
               <AnimatedCursor
                 innerSize={16}
@@ -103,13 +100,12 @@ const App: React.FC = () => {
                 </Transition>
               ))}
             </main>
-            <Menu
-              activeSectionIndex={activeSectionIndex}
-              setActiveSectionIndex={setActiveSectionIndex}
-            />
           </div>
+          <Menu
+            activeSectionIndex={activeSectionIndex}
+            setActiveSectionIndex={setActiveSectionIndex}
+          />
         </div>
-      </Div100vh>
     </div>
   );
 };

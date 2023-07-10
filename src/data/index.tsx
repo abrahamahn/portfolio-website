@@ -141,16 +141,6 @@ export const BlogData: BlogItem[] = [
     categories: ["Web Dev", "Frontend"],
   },
   {
-    link: "https://medium.com/@abrahamahn/fifty-fifty-the-attrakt-shattering-glass-ceilings-and-their-success-story-of-defying-industry-93c60f81b876",
-    image: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*ZMzMtEeOgQm89wAIuU9u2g.jpeg",
-    alt: "FIFTY FIFTY & The ATTRAKT: Shattering Glass Ceilings and Their Success Story of Defying Industry Norms",
-    title: "FIFTY FIFTY & The ATTRAKT: Shattering Glass Ceilings and Their Success Story of Defying Industry Norms",
-    postedDate: "2023-06-20",
-    description:
-      "In the unforgiving battlefield of K-Pop, where triumph often depends on the backing of heavyweight entertainment conglomerates, the story of FIFTY FIFTY and their agency, The ATTRAKT, consisted of merely 5 people- stands out as a shining testament to resilience and ingenuity. Currently, `Cupid music video logs 80 million views on YouTube, while the song ranks 4th on Spotify`s Weekly Global Top Songs. As of now, FIFTY FIFTY stands at the second position in the list of K-Pop artists with the highest number of monthly listeners on Spotify, while being among the top 71 of all artists globally. To fully appreciate their rise to the top, I`ve collated articles and reports from around the web, creating a comprehensive chronology of FIFTY FIFTY`s success and examining the groundbreaking marketing strategies employed by The ATTRAKT, along with the undeniable artistic genius of FIFTY FIFTY.",
-    categories: ["Music", "Marketing"],
-  },
-  {
     link: "https://medium.com/@abrahamahn/introduction-to-webpack-a-beginners-guide-to-configuration-for-react-js-projects-de9d32d82a25",
     image: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*wDQ9ttktgtqVgqs5xpGSGA.jpeg",
     alt: "Mastering Webpack: The Ultimate Guide for Optimizing React.js Projects",

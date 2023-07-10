@@ -16,6 +16,7 @@ const Home: React.FC<HomeProps> = ({
   return (
     <div className="home">
       <div className="hero">
+        
         <p>Creating the best digital web experiences.</p>
       </div>
       <div className="grid">

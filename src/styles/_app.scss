@@ -29,70 +29,49 @@ h6 {
   font-size: 16px;
 }
 
+html {
+  width: 100%;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
 body {
-  font-family: "Poppins";
-  font-size: 15px;
-  line-height: 1.2;
-  letter-spacing: 0px;
-  word-wrap: break-word;
-  font-weight: 300;
-  color: #88888b;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow-y: hidden;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .main_container {
-  display: relative;
-  z-index: 0;
-  width: 100vw;
-  height: 100vh;
-  clear: both;
-  float: center;
+  height: 100%;
+  width: 100%;
   padding: 20px;
   overflow: hidden;
-  margin: 0;
+  margin: 0 auto;
   background: linear-gradient(-45deg, #7ed6ea, #7b84e1, #76bdd7, #7ad2bd);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   @media screen and (max-width: 1080px) {
-    padding: 5px;
-    z-index: 999;
     min-height: 100vh;
-    height: 100%;
+    min-height: -webkit-fill-available;
   }
   .sub_container {
     width: 100%;
     height: calc(100vh - 40px);
     border: 3px double rgb(0, 0, 0);
-    clear: both;
-    float: center;
-    margin: 0 auto;
     border-radius: 40px;
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.16);
     @media screen and (max-width: 1080px) {
-      position: absolute;
+      height: 100%;
       width: calc(100% - 10px);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .header_container {
-      width: 100%;
-      background-color: hsla(0, 0%, 0%, 0.10);
     }
     .viewpoint {
-      height: 100%;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
       width: 100%;
-      position: relative;
-      height: 100%;
-      @media screen and (max-width: 1080px) {
-        width: 100%;
-        z-index: 0;
-        margin-top: 0px;
-      }
-      .section {
-        height: 100%;
-      }
     }
   }
 
