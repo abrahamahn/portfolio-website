@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = windowWidth <= 1080;
+  const isMobile = windowWidth <= 768;
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize: number = isMobile ? PortfolioData.length : (window.innerWidth < 1080 ? 3 : 6);

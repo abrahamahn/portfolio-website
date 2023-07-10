@@ -37,6 +37,7 @@ html {
   padding: 0;
 }
 body {
+  font-family: "poppins";
   min-height: 100vh;
   min-height: -webkit-fill-available;
   overflow-y: hidden;
@@ -53,7 +54,7 @@ body {
   background: linear-gradient(-45deg, #7ed6ea, #7b84e1, #76bdd7, #7ad2bd);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 768px) {
     min-height: 100vh;
     min-height: -webkit-fill-available;
   }
@@ -64,7 +65,7 @@ body {
     border-radius: 40px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.16);
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       height: 100%;
       width: calc(100% - 10px);
     }

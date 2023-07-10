@@ -13,11 +13,11 @@ const Blog: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = windowWidth <= 1080;
+  const isMobile = windowWidth <= 768;
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const pageSize = window.innerWidth < 1080 ? BlogData.length : 6;
+  const pageSize = window.innerWidth < 768 ? BlogData.length : 6;
   const totalPages = Math.ceil(BlogData.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;

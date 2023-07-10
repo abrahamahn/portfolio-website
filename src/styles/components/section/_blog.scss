@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 768px) {
     height: calc(100vh - 122px);
   }
 
@@ -16,7 +16,7 @@
     width: 100%;
     max-width: 1010px;
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       height: 2.5rem;
       background-color: rgba(255, 255, 255, 0);
       z-index: 1;
@@ -31,7 +31,7 @@
       align-items: flex-start;
       margin-left: 30px;
 
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         font-size: 1.25rem;
         text-align: left;
         margin-left: 15px;
@@ -46,7 +46,7 @@
         padding-bottom: 20px;
         text-align: right;
 
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 768px) {
           font-size: 1rem;
           text-align: right;
         }
@@ -65,7 +65,7 @@
     justify-content: center;
     overflow-x: hidden;
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       margin: 0 auto;
       padding-bottom: 7px; 
@@ -86,7 +86,7 @@
       overflow: -moz-hidden-unscrollable;
       overflow-x: hidden;
 
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         width: 100%;
         max-width: 800px;
         height: 100vh;
@@ -110,7 +110,7 @@
         border: 1px solid #d5d5d5;
         transition: background-color 0.3s ease-in-out;
 
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 768px) {
           width: 90%;
           height: 11.2rem;
           max-width: 1020px;
@@ -164,7 +164,7 @@
             justify-content: center;
 
             .info_top_inner {
-              @media screen and (max-width: 1080px) {
+              @media screen and (max-width: 768px) {
                 height: auto;
               }
 
@@ -177,7 +177,7 @@
                 height: 26px;
                 overflow-y: hidden;
 
-                @media screen and (max-width: 1080px) {
+                @media screen and (max-width: 768px) {
                   font-size: 0.7rem;
                   height: 1.5rem;
                   overflow: hidden;
@@ -192,7 +192,7 @@
                 margin: 1px 0;
                 color: white;
 
-                @media screen and (max-width: 1080px) {
+                @media screen and (max-width: 768px) {
                   font-size: 0.55rem;
                   overflow: hidden;
                 }
@@ -263,7 +263,7 @@
             overflow: hidden;
             color: white;
 
-            @media screen and (max-width: 1080px) {
+            @media screen and (max-width: 768px) {
               margin-top: 5px;
               font-size: 0.55rem;
               overflow: scroll;
@@ -294,7 +294,7 @@
         cursor: none;
       }
 
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         width: 20px;
         height: 20px;
         padding: 2px;
@@ -317,7 +317,7 @@
       margin: 0 5px;
       cursor: none;
 
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         width: 8px;
         height: 8px;
         margin: 0 4px;

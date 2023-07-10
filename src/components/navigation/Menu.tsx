@@ -34,7 +34,7 @@ const Menu: React.FC<MenuProps> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = windowWidth <= 1080;
+  const isMobile = windowWidth <= 768;
 
   const handleMenuItemClick = (index: number) => {
     setActiveSectionIndex(index);

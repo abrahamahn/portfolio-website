@@ -19,7 +19,7 @@ type SectionType = () => ReactNode;
 
 const App: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const isMobile = windowWidth <= 1080;
+  const isMobile = windowWidth <= 768;
 
   const dispatch: AppDispatch = useDispatch();
   const activeSectionIndex = useSelector((state: RootState) => state.app.activeSectionIndex);

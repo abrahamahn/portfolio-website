@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 768px) {
     height: calc(100vh - 122px);
   }
   .about {
@@ -21,7 +21,7 @@
     border-radius: 15px;
     background-color: #00000030;
     border: solid 1px white;
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       height: 50vh;
     }
     .left_div {
@@ -32,7 +32,7 @@
       padding-left: 20px;
       padding-right: 10px;
       height: 100%;
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         height: 40%;
         width: 100%;
         padding: 0 30px;
@@ -43,7 +43,7 @@
           font-size: 3rem;
           font-weight: 600;
           color: white;
-          @media screen and (max-width: 1080px) {
+          @media screen and (max-width: 768px) {
             font-size: 1.5rem;
             margin-left: -3px;
           }
@@ -53,14 +53,14 @@
         width: 100%;
         float: left;
         color: white;
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 768px) {
           width: 100%;
           padding-left: 0px;
         }
         p {
           font-size: 0.85rem;
           max-width: 90%;
-          @media screen and (max-width: 1080px) {
+          @media screen and (max-width: 768px) {
             margin-top: 30px;
             font-size: 0.85rem;
             max-width: 100%;
@@ -72,7 +72,7 @@
           padding-top: 20px;
           flex-wrap: wrap;
           margin: 13px -20px 20px;
-          @media screen and (max-width: 1080px) {
+          @media screen and (max-width: 768px) {
             margin: 13px -10px 20px;
             padding-top: 0px;
           }
@@ -80,7 +80,7 @@
             width: 50%;
             padding: 0 20px;
             margin-bottom: 10px;
-            @media screen and (max-width: 1080px) {
+            @media screen and (max-width: 768px) {
               width: 50%;
               padding: 0 10px;
               margin-bottom: 5px;
@@ -91,7 +91,7 @@
               color: #ffffff;
               margin-bottom: 10px;
               display: inline-block;
-              @media screen and (max-width: 1080px) {
+              @media screen and (max-width: 768px) {
                 font-size: 0.8rem;
                 margin-bottom: 3px;
                 margin-left: 2px;
@@ -157,7 +157,7 @@
       justify-content: center;
       align-items: center;
       padding-right: 20px;
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
       .image {
@@ -207,7 +207,7 @@
     @media (max-width: 992px) {
       width: 700px;
     }
-    @media (max-width: 1080px) {
+    @media (max-width: 768px) {
       width: 560px;
     }
     @media (max-width: 599px) {
@@ -390,14 +390,14 @@
   .col-6 {
     margin-top: 0;
     margin-bottom: 20px;
-    @media (max-width: 1080px) {
+    @media (max-width: 768px) {
       flex: 0 0 auto;
       width: 100%;
     }
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .about-popup-wrapper {
     .description_wrap {
       > .row > .col-6 {
