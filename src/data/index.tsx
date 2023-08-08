@@ -116,17 +116,6 @@ export const PortfolioData: PortfolioItem[] = [
     categories: ["Web Dev", "Frontend", "UX"],
     stacks: ["CSS", "Javascript", "HTML", "Wordpress"]
   },
-  {
-    link: "https://nickhadim.com/",
-    image: "assets/portfolio/nickhadim.jpg",
-    alt: "Nick Hadim",
-    title: "Front End Design",
-    postedDate: "2016-06-15",
-    description:
-      "Nick Hadim is a prominent commercial real estate company based in Los Angeles, California. In my role, I assumed responsibility for the UI/UX design of the company's website, ensuring an optimal user experience. Additionally, I actively maintained and updated the listings of commercial properties available for rentals and sales, ensuring that the website consistently provided accurate and up-to-date information to clients and potential investors.",
-    categories: ["Web Dev", "Frontend", "UX"],
-    stacks: ["CSS", "Javascript", "HTML"]
-  },
 ];
 
 export const BlogData: BlogItem[] = [

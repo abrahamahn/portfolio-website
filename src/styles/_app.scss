@@ -31,13 +31,13 @@ h6 {
 
 html {
   width: 100%;
-  height: -webkit-fill-available;
+  height: -webkit-stretch;
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
   @media screen and (max-width: 768px) {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: -webkit-stretch;
     border: none;
     border-radius: 0px;
   }
@@ -45,7 +45,7 @@ html {
 body {
   font-family: "poppins";
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: -webkit-stretch;
   overflow-y: hidden;
   margin: 0 auto;
   padding: 0;
@@ -67,8 +67,8 @@ body {
     height: 100vh;
     min-height: 100vh;
     min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available;
+    min-height: -webkit-stretch;
+    min-height: stretch;
   }
   .sub_container {
     width: 100%;
@@ -82,10 +82,10 @@ body {
       border: none;
       border-radius: 0px;
       height: calc(100vh - 140px);
-      min-height: 100vh;
+      min-height: calc(100vh - 140px);
       min-height: -moz-available;
-      min-height: -webkit-fill-available;
-      min-height: fill-available;
+      min-height: -webkit-stretch;
+      min-height: stretch;
     }
   }
 }
