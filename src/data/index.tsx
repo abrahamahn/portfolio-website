@@ -70,7 +70,7 @@ export const PortfolioData: PortfolioItem[] = [
     description:
       "Music artist website showcasing music, video, shop, videos, and various social media redirect links.",
     categories: ["Web Dev", "Frontend", "UX"],
-    stacks: ["Next JS", "Typescript", "SCSS", "Javascript", "Tailwind CSS"]
+    stacks: ["Next JS", "Typescript", "Tailwind CSS"]
   },
   {
     link: "https://abrahamahn.com/",
@@ -81,7 +81,7 @@ export const PortfolioData: PortfolioItem[] = [
     description:
       "Personal portfolio website for myself, showcasing portfolios, Medium blog posts, social media links, and contact forms with my brief information.",
     categories: ["Web Dev", "Frontend", "UX"],
-    stacks: ["React JS", "Typescript", "SCSS", "Javascript"]
+    stacks: ["React JS", "Typescript", "SCSS"]
   },
   {
     link: "https://auto-connect.netlify.app/",
@@ -114,7 +114,7 @@ export const PortfolioData: PortfolioItem[] = [
     description:
       "Blendtune Music Player is an online music store that provides a diverse catalog of music instrumentals for artists to browse, purchase, and download. Additionally, it features a mini player that allows users to preview the catalogs before making a selection.",
     categories: ["Web Dev", "Frontend"],
-    stacks: ["Next JS", "Typescript", "SCSS", "Javascript", "Tailwind CSS"]
+    stacks: ["Next JS", "Typescript", "CSS", "Javascript"]
   },
   {
     link: "https://cashrollie.com/",
