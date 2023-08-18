@@ -62,6 +62,17 @@ export const SkillData: SkillItem[] = [
 
 export const PortfolioData: PortfolioItem[] = [
   {
+    link: "https://meekahmusic.com/",
+    image: "assets/portfolio/artist-website.jpg",
+    alt: "Portfolio Website",
+    title: "Front-end Development",
+    postedDate: "2023-08-18",
+    description:
+      "Music artist website showcasing music, video, shop, videos, and various social media redirect links.",
+    categories: ["Web Dev", "Frontend", "UX"],
+    stacks: ["Next JS", "Typescript", "SCSS", "Javascript", "Tailwind CSS"]
+  },
+  {
     link: "https://abrahamahn.com/",
     image: "assets/portfolio/portfolio-website.jpg",
     alt: "Portfolio Website",
@@ -70,7 +81,7 @@ export const PortfolioData: PortfolioItem[] = [
     description:
       "Personal portfolio website for myself, showcasing portfolios, Medium blog posts, social media links, and contact forms with my brief information.",
     categories: ["Web Dev", "Frontend", "UX"],
-    stacks: ["React JS", "Typescript", "SCSS", "Javascript", "Tailwind CSS"]
+    stacks: ["React JS", "Typescript", "SCSS", "Javascript"]
   },
   {
     link: "https://auto-connect.netlify.app/",
