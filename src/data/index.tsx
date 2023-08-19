@@ -30,7 +30,7 @@ export const SocialMediaData: SocialMediaItem[] = [
 export const AboutData: AboutItem = {
   title: "Hello!",
   paragraph1: `I specialize in designing and building marvelous digital web experiences and letting people know about them.`,
-  paragraph2: `Currently, I am building different web app modules related to music, multimedia, and social media.`,
+  paragraph2: `Currently, I am building different web app modules related to music, multimedia, and social media. Please click Resume for more information.`,
 };
 
 export const SkillData: SkillItem[] = [

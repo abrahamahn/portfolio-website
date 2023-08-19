@@ -45,7 +45,7 @@ const About: React.FC = () => {
                 className="learn_more"
                 onClick={toggleModal}
               >
-                View Details
+                Resume
               </button>
             </div>
           </div>
