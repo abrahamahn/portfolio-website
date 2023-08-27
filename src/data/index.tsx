@@ -62,6 +62,17 @@ export const SkillData: SkillItem[] = [
 
 export const PortfolioData: PortfolioItem[] = [
   {
+    link: "https://github.com/abrahamahn/spreadsheet",
+    image: "assets/portfolio/spreadsheet.jpg",
+    alt: "Spreadsheet",
+    title: "Full Stack Development",
+    postedDate: "2023-08-27",
+    description:
+      "Fully functional Excel web application",
+    categories: ["Web Dev", "Frontend", "Backend", "UX"],
+    stacks: ["React JS", "Typescript", "CSS", "Flask", "Python"]
+  },
+  {
     link: "https://meekahmusic.com/",
     image: "assets/portfolio/artist-website.jpg",
     alt: "Portfolio Website",
@@ -103,7 +114,7 @@ export const PortfolioData: PortfolioItem[] = [
     description:
       "Transaction Approval is a mobile-first web application prototype designed to facilitate the approval process for transactions within internal teams of companies. It offers a range of filter options and includes buttons for approving or disapproving transactions.",
     categories: ["Web Dev", "UX", "Frontend"],
-    stacks: ["React JS", "Typescript", "CSS", "Javascript"]
+    stacks: ["React JS", "Typescript", "CSS", "Javascript", "Python", "Node.js"]
   },
   {
     link: "https://blendtune.com/",
