@@ -28,7 +28,7 @@ const ResumeRequest: React.FC = () => {
       await emailjs.sendForm(
         "service_2dr1qmv",
         "template_w5iqp0o",
-        form.current?.form as HTMLFormElement, // Access the underlying DOM element using form.current?.form
+        form.current?.form as HTMLFormElement,
         "NfAHr5e8dWDpEmpQJ"
       );
       alert(

@@ -4,44 +4,51 @@ interface ExperienceItem {
   year: string;
   img: string;
   position: string;
-  compnayName: string;
+  companyName: string;
   details: string;
 }
 
 const experienceContent: ExperienceItem[] = [
   {
+    year: "Aug 2023 - Present",
+    img: "/assets/company/divisionone.jpg",
+    position: "Software Engineer",
+    companyName: "Division One Fitness, LLC",
+    details: `Online platform for highschool and college athletes.`,
+  },
+  {
     year: "Jan 2018 - June 2020",
     img: "/assets/company/cashrollie.jpg",
     position: "Founder",
-    compnayName: "Cashrollie",
-    details: `  Music production and publishing company for artists and content creators.`,
+    companyName: "Cashrollie",
+    details: `Music production and publishing company for artists and content creators.`,
   },
   {
     year: "Jan 2017 - Dec 2017",
     img: "/assets/company/nick.jpg",
     position: "Web Developer and Marketing Manager",
-    compnayName: "Nick Hadim Group of Companies",
+    companyName: "Nick Hadim Group of Companies",
     details: `Commercial real estate property management company based in Los Angeles.`,
   },
   {
     year: "May 2012 - Jan 2017",
     img: "/assets/company/portal.jpg",
     position: "Founder & Freelancer",
-    compnayName: "Portal Music Group",
+    companyName: "Portal Music Group",
     details: `Client: Transparent Agency, Far East Movement, Dumbfoundead, Native Instruments, Splice, Google, KIA, GE, Ensure, JW Marriott, Markus Persson, Ultra Music Festival`,
   },
   {
     year: "Jan 2016 - Oct 2016",
     img: "/assets/company/sunrun.jpg",
     position: "Sales Associate",
-    compnayName: "Sunrun",
+    companyName: "Sunrun",
     details: `Generated $100,000+/yr revenue with door-to-door sales, 4,000+/mo cold prospects, and averaged 60+/mo closes.`,
   },
   {
     year: "Aug 2013 - Dec 2013",
     img: "/assets/company/axs.jpg",
     position: "Product and Marketing Intern",
-    compnayName: "AXS.com",
+    companyName: "AXS.com",
     details: `Online ticketing service platform owned by Anschutz Entertainment Group (AEG).`,
   },
 ];
@@ -59,7 +66,7 @@ const Experience: React.FC = () => {
           <h5 className="poppins-font text-uppercase">
             {val.position}
           </h5>
-          <h5 className="place open-sans-font">{val.compnayName}</h5>
+          <h5 className="place open-sans-font">{val.companyName}</h5>
           <p className="open-sans-font">{val.details}</p>
         </li>
       ))}
