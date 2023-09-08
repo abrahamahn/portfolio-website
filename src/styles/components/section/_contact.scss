@@ -7,11 +7,10 @@
   justify-content: center;
   margin: 0 auto;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 115px);
-    min-height: calc(100vh - 115px);
-    min-height: -moz-available;
-    min-height: -webkit-stretch;
-    min-height: stretch;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 30px;
   }
   .contact {
     width: 100%;
@@ -22,6 +21,8 @@
     margin: 0 auto;
     color: white;
     @media screen and (max-width: 768px) {
+      height: 60%;
+      margin-top: -80px;
       padding: 0 15px;
     }
     .title {
@@ -48,7 +49,7 @@
       }
       .form {
         width: 100%;
-        background-color: #00000030;
+        background-color: #00000015;
         padding: 30px 30px 30px 30px;
         border-radius: 8px;
         border: solid 1px white;
@@ -152,12 +153,13 @@
                 display: inline-block;
                 border-radius: 10px;
                 transition: all 0.3s ease;
-                background-color: rgba(0, 0, 0, 0.633);
-                border: none;
+                background-color: rgba(255, 255, 255, 0);
+                border: 1px solid white;
                 @media screen and (max-width: 768px) {
-                  font-size: 0.85rem;
-                  padding: 8px 20px;
-                  border-radius: 5px;
+                  width: auto;
+                  font-size: 0.9rem;
+                  padding: 0.5rem 1.5rem;;
+                  margin-top: 20px;
                 }
               }
               button:hover {

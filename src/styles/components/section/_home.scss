@@ -9,12 +9,10 @@
   margin: 0px;
   padding: 0px;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 115px);
-    min-height: calc(100vh - 115px);
-    min-height: -moz-available;
-    min-height: -webkit-stretch;
-    min-height: stretch;
-
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 30px;
   }
   .content {
     margin: 0 auto;
@@ -25,15 +23,8 @@
     justify-content: center;
     height: 100vh;
     @media screen and (max-width: 768px) {
-      position: absolute;
-      bottom: -5px;
-      left: 10px;
-      margin-left: 10px;
-      width: 250px;
-      height: 220px;
-      align-items: left;
-      display: flex;
-      justify-content: flex-start;
+      height: 60%;
+      margin-top: -80px;
     }
     .name {
       font-size: 2.5rem;
@@ -64,8 +55,9 @@
       line-height: 1.2;
       @media screen and (max-width: 768px) {
         margin-top: 0px;
-        text-align: left;
-        margin-left: 5px;
+        bottom: 0;
+        text-align: center;
+        margin-left: 0px;
         font-size: 1.2rem;
         color: white;
         font-weight: 700;
@@ -81,17 +73,14 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      border: 1px solid black;
       padding: 0;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         width: 0px;
         border: none;
-        margin-bottom: 50px;
         flex-direction: column;
         align-items: left;
         justify-content: left;
-        margin-left: 0px;
       }
       .portfolio_button,
       .resume_button {
@@ -103,7 +92,6 @@
         padding: 0;
         flex: 1;
         background: rgba(0, 0, 0, 0.05);
-        border: 1px solid black;
         @media screen and (max-width: 768px) {
           border: none;
           background: transparent;

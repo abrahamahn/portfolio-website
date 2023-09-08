@@ -7,11 +7,10 @@
   align-items: center;
   overflow: auto;
   @media screen and (max-width: 1080px) {
-    height: calc(100vh - 115px);
-    min-height: calc(100vh - 115px);
-    min-height: -moz-available;
-    min-height: -webkit-stretch;
-    min-height: stretch;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 30px;
   }
   .about {
     max-width: 800px;
@@ -23,11 +22,11 @@
     padding: 10px;
     margin: 15px;
     border-radius: 15px;
-    background-color: #00000030;
+    background-color: #00000015;
     border: solid 1px white;
     @media screen and (max-width: 1080px) {
       height: 60%;
-      margin-top: -20px;
+      margin-top: -80px;
     }
     .left_div {
       display: flex;
@@ -68,8 +67,8 @@
           max-width: 90%;
           @media screen and (max-width: 1080px) {
             margin-top: 0px;
-            font-size: 0.85rem;
-            line-height: 1rem;
+            font-size: 0.8rem;
+            line-height: 1.4;
             max-width: 100%;
           }
         }
@@ -117,7 +116,7 @@
                 height: 100%;
                 .bar_inner {
                   height: 100%;
-                  background: #000000d6;
+                  background: #ffffffc4;
                   border-radius: 5px;
                   overflow: hidden;
                 }
@@ -135,17 +134,17 @@
             border-radius: 5px;
             font-weight: 400;
             color: white;
-            background: rgba(0, 0, 0, 0.706);
-            border: 1px solid black;
+            background: rgba(255, 255, 255, 0);
+            border: 1px solid white;
             margin: 5px;
             font-size: 0.80rem;
             padding: 8px 15px;
             margin-left: 0px;
             @media screen and (max-width: 767px) {
               width: auto;
-              font-size: 0.75rem;
-              padding: 0.5rem 1rem;;
-              margin-top: -10px;
+              font-size: 0.9rem;
+              padding: 0.5rem 1.5rem;;
+              margin-top: 0px;
             }
           &:hover {
             transform: translateY(-5px);
@@ -208,7 +207,7 @@
     width: 1070px;
     border: solid 2px white;
     border-radius: 10px;
-    background-color: #0000009b;
+    background-color: #00000075;
     @media screen and (max-width: 1199px) {
       width: 900px;
     }

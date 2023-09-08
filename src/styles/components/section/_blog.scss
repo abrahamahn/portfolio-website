@@ -9,11 +9,10 @@
   align-items: center;
   position: relative;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 115px);
-    min-height: calc(100vh - 115px);
-    min-height: -moz-available;
-    min-height: -webkit-stretch;
-    min-height: stretch;
+    position: absolute;
+    height: 100vh;
+    top: 55px;
+    bottom: 0px;
   }
   .blog {
     width: 100%;
@@ -51,6 +50,7 @@
         overflow-y: auto;
         padding: 20px 5px;
         padding-bottom: 200px;
+        height: 95%;
       }
 
       &.transition-enabled {

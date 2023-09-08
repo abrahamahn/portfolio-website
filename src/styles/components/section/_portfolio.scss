@@ -8,11 +8,10 @@
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 115px);
-    min-height: calc(100vh - 115px);
-    min-height: -moz-available;
-    min-height: -webkit-stretch;
-    min-height: stretch;
+    position: absolute;
+    height: 100vh;
+    top: 55px;
+    bottom: 0px;
   }
   .portfolio {
     width: 100%;
@@ -25,8 +24,8 @@
     overflow-x: hidden;
     @media screen and (max-width: 768px) {
       width: 100%;
+      height: 95%;
       margin: 0 auto;
-      padding-bottom: 7px; 
       display: flex;
       flex-direction: column;
       align-items: flex-start;
