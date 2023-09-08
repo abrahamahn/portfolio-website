@@ -8,7 +8,11 @@
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 768px) {
-    height: 100vh;
+    height: calc(100vh - 115px);
+    min-height: calc(100vh - 115px);
+    min-height: -moz-available;
+    min-height: -webkit-stretch;
+    min-height: stretch;
   }
   .portfolio {
     width: 100%;

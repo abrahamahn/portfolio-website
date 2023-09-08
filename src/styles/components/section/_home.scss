@@ -9,8 +9,11 @@
   margin: 0px;
   padding: 0px;
   @media screen and (max-width: 768px) {
-    height: 100vh;
-    margin-top: -60px;
+    height: calc(100vh - 115px);
+    min-height: calc(100vh - 115px);
+    min-height: -moz-available;
+    min-height: -webkit-stretch;
+    min-height: stretch;
 
   }
   .content {
@@ -23,7 +26,7 @@
     height: 100vh;
     @media screen and (max-width: 768px) {
       position: absolute;
-      bottom: 50px;
+      bottom: -5px;
       left: 10px;
       margin-left: 10px;
       width: 250px;

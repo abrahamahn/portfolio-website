@@ -7,8 +7,11 @@
   justify-content: center;
   margin: 0 auto;
   @media screen and (max-width: 768px) {
-    height: 100vh;
-    margin-top: -80px;
+    height: calc(100vh - 115px);
+    min-height: calc(100vh - 115px);
+    min-height: -moz-available;
+    min-height: -webkit-stretch;
+    min-height: stretch;
   }
   .contact {
     width: 100%;

@@ -7,8 +7,11 @@
   align-items: center;
   overflow: auto;
   @media screen and (max-width: 1080px) {
-    height: 100vh;
-    margin-top: -60px;
+    height: calc(100vh - 115px);
+    min-height: calc(100vh - 115px);
+    min-height: -moz-available;
+    min-height: -webkit-stretch;
+    min-height: stretch;
   }
   .about {
     max-width: 800px;
