@@ -74,6 +74,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 0;
+      border: 1px solid black;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         width: 0px;
@@ -89,9 +90,10 @@
         justify-content: center;
         align-items: center;
         margin: 2px;
-        padding: 0;
+        padding: 2px 0;
         flex: 1;
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(0, 0, 0, 0.15);
+        border: 1px solid black;
         @media screen and (max-width: 768px) {
           border: none;
           background: transparent;
