@@ -38,7 +38,7 @@ export const SocialMediaData: SocialMediaItem[] = [
 export const AboutData: AboutItem = {
   title: "Hello!",
   paragraph1: `I specialize in designing and building marvelous digital web experiences and letting people know about them.`,
-  paragraph2: `Currently, I am building different web app modules related to music, multimedia, and social media. Please click Resume for more information.`,
+  paragraph2: `Currently, I am building different web app modules related to sports, music, multimedia, and social media. Please click Resume for more information.`,
 };
 
 export const SkillData: SkillItem[] = [
@@ -69,6 +69,16 @@ export const SkillData: SkillItem[] = [
 ];
 
 export const PortfolioData: PortfolioItem[] = [
+  {
+    link: "https://stadiumskills.com/",
+    image: "assets/portfolio/stadium-skills.jpg",
+    alt: "Spreadsheet",
+    title: "Full-Stack Tech Lead Development",
+    postedDate: "2023-08-27",
+    description: "Limited information for confidentiality agreement.",
+    categories: [],
+    stacks: [],
+  },
   {
     link: "https://github.com/abrahamahn/spreadsheet",
     image: "assets/portfolio/spreadsheet.jpg",

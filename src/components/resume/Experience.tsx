@@ -11,10 +11,10 @@ interface ExperienceItem {
 const experienceContent: ExperienceItem[] = [
   {
     year: "Aug 2023 - Present",
-    img: "/assets/company/divisionone.jpg",
-    position: "Software Engineer",
-    companyName: "Division One Fitness, LLC",
-    details: `Online platform for highschool and college athletes.`,
+    img: "/assets/company/stadium-skills.jpg",
+    position: "Startup Lead Software Engineer",
+    companyName: "Stadium Skills, Inc.",
+    details: `Sports recruiting platform.`,
   },
   {
     year: "Jan 2018 - June 2020",
@@ -63,9 +63,7 @@ const Experience: React.FC = () => {
             <i className="fa fa-briefcase"></i>
           </div>
           <span className="time open-sans-font text-uppercase">{val.year}</span>
-          <h5 className="poppins-font text-uppercase">
-            {val.position}
-          </h5>
+          <h5 className="poppins-font text-uppercase">{val.position}</h5>
           <h5 className="place open-sans-font">{val.companyName}</h5>
           <p className="open-sans-font">{val.details}</p>
         </li>
