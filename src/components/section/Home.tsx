@@ -15,7 +15,9 @@ const Home: React.FC<HomeProps> = ({
   handlePortfolioClick,
 }) => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-  const [description, setDescription] = useState(HeaderData.desktopdesc);
+  const initialDescription =
+    window.innerWidth <= 768 ? HeaderData.mobiledesc : HeaderData.desktopdesc;
+  const [description, setDescription] = useState(initialDescription);
 
   useEffect(() => {
     const handleResize = () => {

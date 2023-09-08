@@ -12,7 +12,7 @@ import {
 
 export const HeaderData: HeaderItem = {
   name: "Abraham Ahn",
-  mobiledesc: "Code, Craft, and Creativity Combined.",
+  mobiledesc: "Turning Ideas into Digital Reality.",
   desktopdesc: "",
 };
 

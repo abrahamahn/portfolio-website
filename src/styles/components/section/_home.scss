@@ -23,10 +23,8 @@
     height: 100vh;
     @media screen and (max-width: 768px) {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      padding-left: 10px;
-      padding-bottom: 50px;
+      bottom: 50px;
+      left: 10px;
       margin-left: 10px;
       width: 250px;
       height: 220px;
@@ -63,7 +61,14 @@
       line-height: 1.2;
       @media screen and (max-width: 768px) {
         margin-top: 0px;
-        display: none;
+        text-align: left;
+        margin-left: 5px;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+        width: 200px;
+        line-height: 1.5;
+        margin-bottom: 10px;
       }
     }
     .button_container {
@@ -74,8 +79,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       border: 1px solid black;
-      border-radius: 5px;
-      padding: 5px;
+      padding: 0;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         width: 0px;
@@ -95,6 +99,8 @@
         margin: 2px;
         padding: 0;
         flex: 1;
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid black;
         @media screen and (max-width: 768px) {
           border: none;
           background: transparent;
@@ -105,19 +111,21 @@
           text-decoration: none;
           border-radius: 10px;
           font-weight: 400;
-          margin: 5px;
-          font-size: 0.9rem;
-          padding: 0.5rem 1rem;
-          border: 2px solid white;
           color: white;
-          padding: 1rem 2rem;
-          background: transparent;
+          background: black;
+          margin: 5px;
+          font-size: 0.80rem;
+          padding: 0.5rem 1rem;
+          border: none;
           @media screen and (max-width: 768px) {
-            width: 160px;
+            width: 180px;
             text-decoration: none;
             font-weight: 400;
-            font-size: 1rem;
-            padding: 0.8rem;
+            color: white;
+            background: transparent;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            border: 2px solid white;
           }
         }
         &:hover {
