@@ -7,17 +7,7 @@
   z-index: 98;
   transition: all 0.3s ease;
   width: 340px;
-  @media screen and (max-width: 768px) {
-    top: 19px;
-    left: 19px;
-    width: 220px;
-    height: 70px;
-  }
   .sidebar {
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      padding: 0px;
-    }
     .logo {
       width: 100%;
       height: 100%;
@@ -25,28 +15,16 @@
       padding: 15px 20px;
       text-align: left;
       margin-left: 5px;
-      @media screen and (max-width: 768px) {
-        margin-top: 0px;
-        padding: 10px;
-        margin-left: 0px;
-      }
       .name {
         font-size: 2rem;
         margin-top: 0px;
         color: white;
-        @media screen and (max-width: 768px) {
-          font-size: 1.5rem;
-        }
       }
       .job_title {
         font-size: 0.8rem;
         color: white;
         margin-top: -5px;
         font-weight: 400;
-        @media screen and (max-width: 768px) {
-          font-size: 0.65rem;
-          margin-top: 0;
-        }
       }
     }
   }
@@ -55,12 +33,7 @@
     height: auto;
     float: left;
     padding: 10px;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      padding: 0px;
-      margin-left: 2px;
-      margin-top: 2px;
-    }
+    margin-top: 30px;
     .items {
       list-style-type: none;
       li {
@@ -69,25 +42,17 @@
         float: left;
         -webkit-user-select: none;
         user-select: none;
-        @media screen and (max-width: 768px) {
-          width: 100%;
-          padding: 0px;
-        }
         a {
           display: flex;
           align-items: center;
           text-decoration: none;
           color: white;
-          font-size: 0.75rem;
+          font-size: 0.9rem;
           font-weight: 500;
           border-radius: 6px;
           padding: 8px 15px;
           position: relative;
           transition: all 0.3s ease;
-          @media screen and (max-width: 768px) {
-            font-size: 0.75rem;
-            padding: 4px 10px;
-          }
           &.active {
             color: white;
             animation: activeColorTransition 5s ease;
@@ -131,73 +96,6 @@
   }
 }
 
-.sidebar .menu .items .item .icons {
-  margin-top: -8px;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  filter: invert(0.3);
-  transition: all 0.3s ease;
-  @media screen and (max-width: 768px) {
-    margin-top: 0px;
-  }
-}
-
-.sidebar .author_container {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border-top: 1px solid #d4d4d4;
-}
-
-.sidebar .author_container .inner {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  padding: 0px;
-  @media screen and (min-width: 768px) and (max-width: 4000px) {
-    padding: 12px;
-  }
-  @media screen and (max-width: 768px) {
-    padding: 10px;
-  }
-}
-
-.sidebar .author_container .image {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 100%;
-  display: inline-block;
-}
-
-.sidebar .author_container .main {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
-  border: 1px solid #88888b;
-}
-
-.sidebar .short h3 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 0.9;
-}
-
-.sidebar .short a {
-  text-decoration: none;
-  color: #88888b;
-  font-size: 11px;
-}
 
 .mobile_footer_container {
   bottom: 0px;
@@ -207,8 +105,8 @@
   border-top: 1px solid #88888b;
   z-index: 999;
   height: 50px;
-  background: linear-gradient(#0000008d, #000000);
-  border-top: black;
+  background: linear-gradient(#0e1b2472, #10299568);
+  border-top: 1px solid rgba(255, 255, 255, 0.359);
 }
 
 .mobile_footer {

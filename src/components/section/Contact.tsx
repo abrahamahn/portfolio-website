@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact_container" id="contact" >
+    <div className="contact_container" id="contact">
       <div className="contact">
         <div className="title">
           <h3>Contact</h3>

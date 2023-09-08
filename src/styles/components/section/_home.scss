@@ -22,9 +22,17 @@
     justify-content: center;
     height: 100vh;
     @media screen and (max-width: 768px) {
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-left: 10px;
+      padding-bottom: 50px;
+      margin-left: 10px;
+      width: 250px;
+      height: 220px;
+      align-items: left;
+      display: flex;
+      justify-content: flex-start;
     }
     .name {
       font-size: 2.5rem;
@@ -34,6 +42,7 @@
       color: white;
       @media screen and (max-width: 768px) {
         font-size: 2rem;
+        display: none;
       }
     }
     .title {
@@ -44,6 +53,7 @@
       color: white;
       @media screen and (max-width: 768px) {
         font-size: 1rem;
+        display: none;
       }
     }
     .text {
@@ -53,36 +63,7 @@
       line-height: 1.2;
       @media screen and (max-width: 768px) {
         margin-top: 0px;
-      }
-    }
-    .social {
-      margin-top: -10px;
-      list-style-type: none;
-      list-style: none;
-      li {
-        margin: 0px;
-        display: inline-block;
-      }
-      li a {
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        position: relative;
-        line-height: 1;
-        padding: 0px 11px;
-        &:hover {
-          transform: translateY(-3px);
-          svg {
-            color: white;
-            transition: all 0.3s ease;
-          }
-        }
-        svg {
-          fill: transparent;
-          color: white;
-          width: 20px;
-          height: 20px;
-        }
+        display: none;
       }
     }
     .button_container {
@@ -93,7 +74,18 @@
       flex-direction: row;
       flex-wrap: wrap;
       border: 1px solid black;
-      padding: 0;
+      border-radius: 5px;
+      padding: 5px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 0px;
+        border: none;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        margin-left: 0px;
+      }
       .portfolio_button,
       .resume_button {
         display: flex;
@@ -103,19 +95,30 @@
         margin: 2px;
         padding: 0;
         flex: 1;
-        border: 1px solid black;
-        background: rgba(0, 0, 0, 0.05);
+        @media screen and (max-width: 768px) {
+          border: none;
+          background: transparent;
+          margin: 0;
+          margin-bottom: 5px;
+        }
         button {
-          width: 120px;
           text-decoration: none;
           border-radius: 10px;
           font-weight: 400;
-          color: white;
-          background: black;
           margin: 5px;
-          font-size: 0.80rem;
+          font-size: 0.9rem;
           padding: 0.5rem 1rem;
-          border: none;
+          border: 2px solid white;
+          color: white;
+          padding: 1rem 2rem;
+          background: transparent;
+          @media screen and (max-width: 768px) {
+            width: 160px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 0.8rem;
+          }
         }
         &:hover {
           transform: translateY(-5px);

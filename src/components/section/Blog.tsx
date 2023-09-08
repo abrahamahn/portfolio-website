@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useSwipeable } from 'react-swipeable';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { useSwipeable } from "react-swipeable";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import { BlogData } from "../../data";
 
@@ -24,12 +24,12 @@ const Blog: React.FC = () => {
 
   const handleCarouselClick = (link: string) => {
     window.open(link, "_blank");
-  }
+  };
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => handlePageChange(1),  // next page
+    onSwipedLeft: () => handlePageChange(1), // next page
     onSwipedRight: () => handlePageChange(-1), // previous page
-    trackMouse: true // track mouse event as well
+    trackMouse: true, // track mouse event as well
   });
 
   const handlePageClick = (pageNumber: number) => {
@@ -62,72 +62,65 @@ const Blog: React.FC = () => {
   }, [currentPage]);
 
   const renderBlogItems = () => {
-    return BlogData
-      .sort((a, b) => new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime())
-      .map((blog, index) => (
-        <div
-          key={index}
-          className="carousel"
-          onClick={() => handleCarouselClick(blog.link)}
-        >
-          <div className="image_container">
-            <a
-              href={blog.link}
-              target="_blank"
-              rel="noreferrer"
-              className="details"
-            >
-              <img
-                className="image"
-                src={blog.image}
-                alt={blog.alt}
-              />
-            </a>
-          </div>
-          <div className="info_container">
-            <div className="info_top">
-              <div className="info_top_inner">
-                <h3 className="title">{blog.title}</h3>
-                <p className="date">
-                  {new Date(blog.postedDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
+    return BlogData.sort(
+      (a, b) =>
+        new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime()
+    ).map((blog, index) => (
+      <div
+        key={index}
+        className="carousel"
+        onClick={() => handleCarouselClick(blog.link)}
+      >
+        <div className="image_container">
+          <a
+            href={blog.link}
+            target="_blank"
+            rel="noreferrer"
+            className="details"
+          >
+            <img className="image" src={blog.image} alt={blog.alt} />
+          </a>
+        </div>
+        <div className="info_container">
+          <div className="info_top">
+            <div className="info_top_inner">
+              <h3 className="title">{blog.title}</h3>
+              <p className="date">
+                {new Date(blog.postedDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </p>
+              {blog.link && (
+                <p className="domain">
+                  <a
+                    href={blog.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    {new URL(blog.link).hostname}
+                  </a>
                 </p>
-                {blog.link && (
-                  <p className="domain">
-                    <a
-                      href={blog.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="link"
-                    >
-                      {new URL(blog.link).hostname}
-                    </a>
-                  </p>
-                )}
-                <div className="category">
-                  {blog.categories.map((category, index) => (
-                    <span key={index} className={`category ${category}`}>
-                      {category}
-                    </span>
-                  ))}
-                </div>
+              )}
+              <div className="category">
+                {blog.categories.map((category, index) => (
+                  <span key={index} className={`category ${category}`}>
+                    {category}
+                  </span>
+                ))}
               </div>
             </div>
-            <p className="description">{blog.description}</p>
           </div>
+          <p className="description">{blog.description}</p>
         </div>
-      ));
+      </div>
+    ));
   };
 
   return (
-    <div
-      {...handlers}
-      className="blog_container"
-      id="blog"
-    >
+    <div {...handlers} className="blog_container" id="blog">
       <div className={`blog${isMobile ? " scrollable" : ""}`}>
         {!isMobile && (
           <FaAngleLeft

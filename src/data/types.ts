@@ -1,6 +1,7 @@
 export interface HeaderItem {
   name: string;
-  description: string;
+  mobiledesc: string;
+  desktopdesc: string;
 }
 
 export interface SocialMediaItem {

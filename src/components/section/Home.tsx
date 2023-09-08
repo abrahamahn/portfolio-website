@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactTyped from "react-typed";
 
-import { HeaderData, SocialMediaData } from "../../data";
-import { SocialMediaItem } from '../../data/types'
+import { HeaderData } from "../../data";
 
 interface HomeProps {
   handleAboutClick: () => void;
@@ -15,6 +14,29 @@ const Home: React.FC<HomeProps> = ({
   handleAboutClick,
   handlePortfolioClick,
 }) => {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [description, setDescription] = useState(HeaderData.desktopdesc);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (viewportWidth <= 768) {
+      // assuming 768px is the breakpoint for mobile
+      setDescription(HeaderData.mobiledesc);
+    } else {
+      setDescription(HeaderData.desktopdesc);
+    }
+  }, [viewportWidth]);
+
   return (
     <div className="home" id="home">
       <div className="content">
@@ -24,7 +46,8 @@ const Home: React.FC<HomeProps> = ({
             className="title"
             data-aos="fade-up"
             data-aos-duration="1200"
-            data-aos-delay="200">
+            data-aos-delay="200"
+          >
             <span className="typer-toper">
               <ReactTyped
                 loop
@@ -46,18 +69,7 @@ const Home: React.FC<HomeProps> = ({
               />
             </span>
           </h1>
-          <p className="text">{HeaderData.description}</p>
-          <div className="social">
-            <ul>
-              {SocialMediaData.map((val: SocialMediaItem, i: number) => (
-                <li key={i}>
-                  <a href={val.link} target="_blank" rel="noreferrer">
-                    {val.iconName}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="text">{description}</p>
           <div className="button_container">
             <div className="portfolio_button">
               <button onClick={handlePortfolioClick}>Portfolio</button>
@@ -68,7 +80,6 @@ const Home: React.FC<HomeProps> = ({
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
