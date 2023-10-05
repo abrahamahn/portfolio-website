@@ -22,7 +22,7 @@
     "eslint-plugin-tailwindcss": "^3.12.1",
     "main": "^1000.0.1",
     "node-sass": "^9.0.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.7.0",
